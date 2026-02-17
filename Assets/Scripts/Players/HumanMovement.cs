@@ -10,7 +10,7 @@ public class HumanMovement : MonoBehaviour
     private float movementX;
     private float movementY;
 
-    public float jumpForce;
+    public float jumpForce = 1;
 
 
     private void Start()
@@ -33,8 +33,11 @@ public class HumanMovement : MonoBehaviour
         rb.AddForce(movement*moveSpeed);
     }
 
-    private void OnJump(InputValue jumpValue) 
+    private void OnJump(InputValue button) 
     {
-        
+        if (button.isPressed)
+        {
+            rb.AddForce(0, jumpForce, 0);
+        }
     }
 }
