@@ -126,10 +126,10 @@ GameObject:
   - component: {fileID: 4095462505551694299}
   - component: {fileID: 2073548459225310497}
   - component: {fileID: 6952340523065567451}
-  - component: {fileID: 3115451514809930761}
   - component: {fileID: 8850218054012382163}
+  - component: {fileID: 6174829844140519313}
   m_Layer: 0
-  m_Name: Capusle
+  m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3115451514809930761}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HumanController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3115451514809930761}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HumanController, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -360,7 +360,19 @@ MonoBehaviour:
     m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
     m_ActionName: 'UI/Point[/Mouse/position]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6174829844140519313}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3c7022bf-7922-4f7c-a998-c437916075ad
     m_ActionName: 'UI/Click[/Mouse/leftButton]'
   - m_PersistentCalls:
@@ -385,25 +397,9 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &3115451514809930761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3715153657734067602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5908a547377adb4e9684eb00b8312a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HumanController
-  speed: 5
-  jumpHeight: 2
-  gravity: -9.8
-  sprintMultiplyer: 2
 --- !u!143 &8850218054012382163
 CharacterController:
   m_ObjectHideFlags: 0
@@ -429,6 +425,24 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6174829844140519313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715153657734067602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb4dc063d6beb641922bed6b5e322d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DualPlayerController
+  speed: 5
+  jumpHeight: 2
+  gravity: -9.8
+  sprintMultiplyer: 2
+  controller: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!1 &6329322514969767626
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +455,7 @@ GameObject:
   - component: {fileID: 4713431424752443377}
   - component: {fileID: 8375501812077316287}
   - component: {fileID: 6784326492158590749}
+  - component: {fileID: 5549562147078628948}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -566,6 +581,22 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &5549562147078628948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6329322514969767626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.PhysicsRaycaster
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &7601330036535874081
 GameObject:
   m_ObjectHideFlags: 0

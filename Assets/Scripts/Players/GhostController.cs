@@ -1,45 +1,148 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GhostController : MonoBehaviour
 {
-    
-    private RectTransform cursor;
+    public Camera mainCam;
+    public float rayRange = 1000000f;
+    public LayerMask interactLayer;
 
-    [SerializeField] private float speed = 5;
+    public float holdThreshold = 0.2f;
 
-    private Vector2 cursorInput;
-    private Vector2 velocity;
-    private Vector2 screenBounds;
-    
-    
+
+    private IInteractable _pressedInteractable;
+    private bool _isDragging;
+    private float _pressTime;
+    private Plane _dragPlane;
+    private Vector3 _dragOffset;
 
     private void Awake()
     {
-        cursor = GetComponentInChildren<RectTransform>();
-
-
-    }
-    private void Start()
-    {
-        screenBounds = new Vector2(Screen.width, Screen.height);
-    }
-
-
-    private void Navigate(InputAction.CallbackContext context)
-    {
-        cursorInput = context.ReadValue<Vector2>();
+        if(mainCam == null)
+        {
+            mainCam = Camera.main;
+        }
     }
 
     private void Update()
     {
-        Vector2 pos = cursor.position;
 
-        pos += cursorInput * speed * Time.deltaTime;
+        if(_pressedInteractable != null)
+        {
+            UpdateDragCheck();
+        }
+    }
 
-        pos.x = Mathf.Clamp(pos.x, 0, screenBounds.x);
-        pos.y = Mathf.Clamp(pos.y, 0, screenBounds.y);
+    private void UpdateDragCheck()
+    {
+        bool heldLongEnough = (Time.time - _pressTime) >= holdThreshold;
 
-        cursor.position = pos;
+        if (!_isDragging && heldLongEnough && _pressedInteractable.isDraggable)
+        {
+
+            _isDragging = true;
+            _pressedInteractable.OnDragStart(GetMouseWorldOnPlane());
+        }
+
+        if (_isDragging)
+        {
+            Vector3 worldPos = GetMouseWorldOnPlane();
+            _pressedInteractable.OnDrag(worldPos + _dragOffset);
+        }
+    }
+
+    private Vector3 GetMouseWorldOnPlane()
+    {
+        Ray ray = GetRaycast();
+        if (_dragPlane.Raycast(ray, out float distance))
+            return ray.GetPoint(distance);
+
+ 
+        Plane ground = new Plane(Vector3.up, Vector3.zero);
+        ground.Raycast(ray, out float d);
+        return ray.GetPoint(d);
+    }
+
+    public void Click(InputAction.CallbackContext context) 
+    {
+        if (context.started) HandleMouseDown();
+        if (context.canceled) HandleMouseUp();
+    }
+
+    private void HandleMouseUp()
+    {
+        if (_pressedInteractable == null)
+            return;
+
+        if (_isDragging)
+        {
+
+            _pressedInteractable.OnDragEnd();
+        }
+        else
+        {
+
+            if (_pressedInteractable.isClickable)
+                _pressedInteractable.OnClick();
+        }
+
+        // Reset state
+        _pressedInteractable = null;
+        _isDragging = false;
+    }
+
+    private void HandleMouseDown()
+    {
+        Ray ray = GetRaycast();
+
+        if (!Physics.Raycast(ray, out RaycastHit hit, rayRange, interactLayer))
+            return;
+
+        IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
+        if (interactable == null)
+            return;
+
+
+        _pressedInteractable = interactable;
+        _pressTime = Time.time;
+        _isDragging = false;
+
+        if (interactable.isDraggable)
+        {
+            Vector3 objectPos = hit.collider.transform.position;
+            _dragPlane = new Plane(Vector3.up, objectPos);
+            _dragOffset = objectPos - hit.point;
+        }
+    }
+
+
+
+
+
+    private Ray GetRaycast()
+    {
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        return mainCam.ScreenPointToRay(mousePos);
+    }
+
+    private void CastRay()
+    {
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        Ray ray = mainCam.ScreenPointToRay(mousePos);
+
+        Debug.Log("LeftCLickPressed");
+
+
+        if (Physics.Raycast(ray, out RaycastHit hit, rayRange, interactLayer))
+        {
+            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green, 2f);
+
+        }
+        else
+        {
+            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green, 2f);
+        }
+
     }
 }
