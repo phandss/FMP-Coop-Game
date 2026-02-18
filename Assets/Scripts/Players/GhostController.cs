@@ -95,6 +95,7 @@ public class GhostController : MonoBehaviour
     private void HandleMouseDown()
     {
         Ray ray = GetRaycast();
+        Debug.Log(GetRaycast());
 
         if (!Physics.Raycast(ray, out RaycastHit hit, rayRange, interactLayer))
             return;
