@@ -35,9 +35,13 @@ public class HumanController : MonoBehaviour
 
     public void Sprint(InputAction.CallbackContext context)
     {
-        if (controller.isGrounded)
+        if (controller.isGrounded && context.started)
         {
-            
+            speed = speed * sprintMultiplyer;
+        }
+        if(controller.isGrounded && context.canceled)
+        {
+            speed = speed / sprintMultiplyer;
         }
     }
 
