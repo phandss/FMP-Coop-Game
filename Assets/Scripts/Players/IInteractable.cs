@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public interface IInteractable
 {
@@ -15,6 +16,7 @@ public interface IInteractable
     void OnDragEnd();
 
     void OnHoverEnter();
+    void OnHoverEnter(InputAction interactAction);
 
     void OnHoverExit();
 }

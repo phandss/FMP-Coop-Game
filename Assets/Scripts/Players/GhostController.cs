@@ -10,7 +10,9 @@ public class GhostController : MonoBehaviour
 
     public float holdThreshold = 0.2f;
 
+    private InputAction _interactAction;
 
+    private IInteractable _hoveredInteractable;
     private IInteractable _pressedInteractable;
     private bool _isDragging;
     private float _pressTime;
@@ -27,10 +29,43 @@ public class GhostController : MonoBehaviour
 
     private void Update()
     {
+        HoverUpdate();
 
         if(_pressedInteractable != null)
         {
             UpdateDragCheck();
+        }
+    }
+
+    private void HoverUpdate()
+    {
+        if (_isDragging) return;
+
+        Ray ray = GetRaycast();
+        IInteractable hit = null;
+
+        if(Physics.Raycast(ray, out RaycastHit hitInfo, rayRange, interactLayer))
+        {
+            hit = hitInfo.collider.GetComponentInParent<IInteractable>();
+        }
+
+        if(hit == _hoveredInteractable)
+        {
+            return;
+        }
+
+        _hoveredInteractable?.OnHoverExit();
+
+        if (_hoveredInteractable != null)
+        {
+            if(_interactAction != null)
+            {
+                _hoveredInteractable.OnHoverEnter(_interactAction);
+            }
+            else
+            {
+                _hoveredInteractable.OnHoverEnter();
+            }
         }
     }
 
@@ -52,20 +87,14 @@ public class GhostController : MonoBehaviour
         }
     }
 
-    private Vector3 GetMouseWorldOnPlane()
-    {
-        Ray ray = GetRaycast();
-        if (_dragPlane.Raycast(ray, out float distance))
-            return ray.GetPoint(distance);
-
- 
-        Plane ground = new Plane(Vector3.up, Vector3.zero);
-        ground.Raycast(ray, out float d);
-        return ray.GetPoint(d);
-    }
 
     public void Click(InputAction.CallbackContext context) 
     {
+
+        if(_interactAction == null)
+        {
+            _interactAction = context.action;
+        }
         if (context.started) HandleMouseDown();
         if (context.canceled) HandleMouseUp();
     }
@@ -87,15 +116,17 @@ public class GhostController : MonoBehaviour
                 _pressedInteractable.OnClick();
         }
 
-        // Reset state
+
         _pressedInteractable = null;
         _isDragging = false;
     }
 
+
+
     private void HandleMouseDown()
     {
         Ray ray = GetRaycast();
-        Debug.Log(GetRaycast());
+        
 
         if (!Physics.Raycast(ray, out RaycastHit hit, rayRange, interactLayer))
             return;
@@ -104,6 +135,7 @@ public class GhostController : MonoBehaviour
         if (interactable == null)
             return;
 
+        Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green, 2f);
 
         _pressedInteractable = interactable;
         _pressTime = Time.time;
@@ -127,23 +159,15 @@ public class GhostController : MonoBehaviour
         return mainCam.ScreenPointToRay(mousePos);
     }
 
-    private void CastRay()
+    private Vector3 GetMouseWorldOnPlane()
     {
-        Vector2 mousePos = Mouse.current.position.ReadValue();
-        Ray ray = mainCam.ScreenPointToRay(mousePos);
+        Ray ray = GetRaycast();
+        if (_dragPlane.Raycast(ray, out float distance))
+            return ray.GetPoint(distance);
 
-        Debug.Log("LeftCLickPressed");
 
-
-        if (Physics.Raycast(ray, out RaycastHit hit, rayRange, interactLayer))
-        {
-            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green, 2f);
-
-        }
-        else
-        {
-            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green, 2f);
-        }
-
+        Plane ground = new Plane(Vector3.up, Vector3.zero);
+        ground.Raycast(ray, out float d);
+        return ray.GetPoint(d);
     }
 }
