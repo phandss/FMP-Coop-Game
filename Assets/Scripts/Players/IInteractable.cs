@@ -3,11 +3,11 @@ using UnityEngine.InputSystem;
 
 public interface IInteractable
 {
-    bool isClickable { get; }
+    bool isInteractable { get; }
     bool isDraggable { get; }
 
 
-    void OnClick();
+    void OnInteract();
 
     void OnDragStart(Vector3 hitpoint);
 

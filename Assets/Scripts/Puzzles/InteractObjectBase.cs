@@ -5,14 +5,27 @@ using UnityEngine.InputSystem;
 [RequireComponent (typeof(Rigidbody))]
 public abstract class InteractObjectBase : MonoBehaviour, IInteractable
 {
-    public abstract bool IsClickable { get; }
-    public abstract bool IsDraggable { get; }
+    public abstract bool isInteractable { get; }
+    public abstract bool isDraggable { get; }
 
+    protected bool isInteractLocked {get; private set;}
 
     protected Rigidbody rb { get; private set; }
 
     private InteractPromptUI _prompt;
 
+    protected bool AttempInteractLock()
+    {
+        if (isInteractLocked)
+        {
+            return false;
+        }
+        isInteractLocked = true;
+        return true;
+
+    }
+
+    protected void unlockInteract() => isInteractLocked = false;
 
 
     protected virtual void Awake()
@@ -27,7 +40,7 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
     }
 
 
-    public virtual void OnClick()
+    public virtual void OnInteract()
     {
 
     }

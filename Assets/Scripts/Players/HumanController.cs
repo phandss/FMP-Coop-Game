@@ -11,13 +11,15 @@ public class HumanController : MonoBehaviour
 
     [SerializeField] private CharacterController controller;
     [SerializeField]private Rigidbody rb;
+    private HumanInteraction _Interact;
     private Vector2 moveInput;
-    private Vector2 velocity;
+    private Vector3 velocity;
 
     private void Awake()
     {
         controller = GetComponentInChildren<CharacterController>();
         rb = GetComponentInChildren<Rigidbody>();
+        _Interact = GetComponent<HumanInteraction>();
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -29,7 +31,7 @@ public class HumanController : MonoBehaviour
     {
         if(context.performed && controller.isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * 2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
 
@@ -45,6 +47,16 @@ public class HumanController : MonoBehaviour
         }
     }
 
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (!context.performed)
+        {
+            return;
+        }
+
+        _Interact?.TriggerInteract();
+    }
+
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3(moveInput.x, 0, moveInput.y);
@@ -54,8 +66,14 @@ public class HumanController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15f);
         }
 
-        transform.Translate(movement * speed * Time.deltaTime, Space.World);
-        
-        
+        if (!controller.isGrounded)
+            velocity.y += gravity * Time.fixedDeltaTime;
+        else if (velocity.y < 0)
+            velocity.y = -2f;
+
+        Vector3 finalMove = (movement * speed) + new Vector3(0, velocity.y, 0);
+        controller.Move(finalMove * Time.fixedDeltaTime);
+
+
     }
 }

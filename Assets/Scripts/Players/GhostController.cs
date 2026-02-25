@@ -112,8 +112,8 @@ public class GhostController : MonoBehaviour
         else
         {
 
-            if (_pressedInteractable.isClickable)
-                _pressedInteractable.OnClick();
+            if (_pressedInteractable.isInteractable)
+                _pressedInteractable.OnInteract();
         }
 
 
