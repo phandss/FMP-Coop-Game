@@ -221,6 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3913077315541481415}
+  - component: {fileID: 5683033047476283043}
   m_Layer: 3
   m_Name: 99_Enviroment_Doors
   m_TagString: Untagged
@@ -246,6 +247,27 @@ Transform:
   - {fileID: 3840854419886758673}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5683033047476283043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4397162205553716605}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4.2417417, z: 4.4817023}
+  m_Center: {x: -1.333032e-13, y: 2.0964763, z: -0.0026147366}
 --- !u!1 &5913236191002725214
 GameObject:
   m_ObjectHideFlags: 0
