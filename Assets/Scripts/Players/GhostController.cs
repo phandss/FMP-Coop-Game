@@ -4,13 +4,13 @@ using UnityEngine.InputSystem;
 
 public class GhostController : MonoBehaviour
 {
-    public Camera mainCam;
-    public float rayRange = 1000000f;
-    public LayerMask interactLayer;
 
-    public float holdThreshold = 0.2f;
+    [SerializeField]private Camera mainCam;
+    [SerializeField]private LayerMask interactLayer;
+    [SerializeField]private float holdThreshold = 0.2f;
+    [SerializeField]private InputActionReference actionReference;
 
-    private InputAction _interactAction;
+    private string _buttonPrompt = "LMB";
 
     private IInteractable _hoveredInteractable;
     private IInteractable _pressedInteractable;
@@ -21,18 +21,30 @@ public class GhostController : MonoBehaviour
 
     private void Awake()
     {
+        mainCam = GetComponentInChildren<Camera>();
         if(mainCam == null)
         {
             mainCam = Camera.main;
+        }
+        if(actionReference == null)
+        {
+            if (actionReference != null)
+            {
+                string display = actionReference.action.GetBindingDisplayString(InputBinding.DisplayStringOptions.DontIncludeInteractions);
+                _buttonPrompt = string.IsNullOrEmpty(display) ? "LMB" : display;
+            }
         }
     }
 
     private void Update()
     {
-        HoverUpdate();
-
-        if(_pressedInteractable != null)
+        if (_isDragging)
         {
+            HoverUpdate();
+        }
+
+        if (_pressedInteractable != null) 
+        { 
             UpdateDragCheck();
         }
     }
@@ -44,7 +56,7 @@ public class GhostController : MonoBehaviour
         Ray ray = GetRaycast();
         IInteractable hit = null;
 
-        if(Physics.Raycast(ray, out RaycastHit hitInfo, rayRange, interactLayer))
+        if(Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity, interactLayer))
         {
             hit = hitInfo.collider.GetComponentInParent<IInteractable>();
         }
@@ -55,18 +67,8 @@ public class GhostController : MonoBehaviour
         }
 
         _hoveredInteractable?.OnHoverExit();
-
-        if (_hoveredInteractable != null)
-        {
-            if(_interactAction != null)
-            {
-                _hoveredInteractable.OnHoverEnter(_interactAction);
-            }
-            else
-            {
-                _hoveredInteractable.OnHoverEnter();
-            }
-        }
+        _hoveredInteractable = hit;
+        _hoveredInteractable?.OnHoverEnter(_buttonPrompt);
     }
 
     private void UpdateDragCheck()
@@ -82,8 +84,7 @@ public class GhostController : MonoBehaviour
 
         if (_isDragging)
         {
-            Vector3 worldPos = GetMouseWorldOnPlane();
-            _pressedInteractable.OnDrag(worldPos + _dragOffset);
+            _pressedInteractable.OnDrag(GetMouseWorldOnPlane() + _dragOffset);
         }
     }
 
@@ -91,31 +92,33 @@ public class GhostController : MonoBehaviour
     public void Click(InputAction.CallbackContext context) 
     {
 
-        if(_interactAction == null)
-        {
-            _interactAction = context.action;
+        if (context.started)
+        { 
+            HandleMouseDown(); 
+
         }
-        if (context.started) HandleMouseDown();
-        if (context.canceled) HandleMouseUp();
+        if (context.canceled)
+        { 
+            HandleMouseUp(); 
+        }
     }
 
     private void HandleMouseUp()
     {
         if (_pressedInteractable == null)
+        {
             return;
+        }
 
         if (_isDragging)
         {
-
             _pressedInteractable.OnDragEnd();
         }
         else
         {
-
             if (_pressedInteractable.isInteractable)
                 _pressedInteractable.OnInteract();
         }
-
 
         _pressedInteractable = null;
         _isDragging = false;
@@ -126,14 +129,21 @@ public class GhostController : MonoBehaviour
     private void HandleMouseDown()
     {
         Ray ray = GetRaycast();
-        
+        Debug.DrawRay(ray.origin, ray.direction, Color.green, 1000);
+        Debug.Log("mouse clicked");
 
-        if (!Physics.Raycast(ray, out RaycastHit hit, rayRange, interactLayer))
+        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, interactLayer))
+        { 
             return;
+        }
+
 
         IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
+
         if (interactable == null)
-            return;
+        { 
+            return; 
+        }
 
         Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green, 2f);
 

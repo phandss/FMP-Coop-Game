@@ -15,8 +15,8 @@ public interface IInteractable
 
     void OnDragEnd();
 
-    void OnHoverEnter();
-    void OnHoverEnter(InputAction interactAction);
+
+    void OnHoverEnter(string buttonPrompt);
 
     void OnHoverExit();
 }

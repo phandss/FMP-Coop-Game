@@ -14,7 +14,7 @@ public class InteractPromptUI : MonoBehaviour
 
 
     private Camera _mainCam;
-    private InputAction _bindingAction;
+
 
     private void Awake()
     {
@@ -37,19 +37,21 @@ public class InteractPromptUI : MonoBehaviour
 
         if(billboard && _mainCam != null)
         {
-            transform.rotation = Quaternion.LookRotation(transform.position - _mainCam.transform.position);
+            transform.rotation = _mainCam.transform.rotation;
         }
     }
 
-
-
-
-    public void Show(InputAction action)
+    public void Show(string buttonPrompt)
     {
-        if(promptCanvas == null) { return; }
+        if (promptCanvas == null)
+        { 
+            return;
+        }
 
-        _bindingAction = action;
-        RefreshBindText();
+        if (promptText != null)
+        {
+            promptText.text = string.IsNullOrEmpty(buttonPrompt) ? "E" : buttonPrompt;
+        }
 
         promptCanvas.gameObject.SetActive(true);
     }
@@ -57,28 +59,17 @@ public class InteractPromptUI : MonoBehaviour
     public void Hide()
     {
         if (promptCanvas != null)
+        {
             promptCanvas.gameObject.SetActive(false);
-
-        _bindingAction = null;
-    }
-
-    private void RefreshBindText()
-    {
-        if (promptText == null || _bindingAction == null)
-            return;
-
-        string displayString = _bindingAction.GetBindingDisplayString(
-            InputBinding.DisplayStringOptions.DontIncludeInteractions
-        );
-
-        promptText.text = string.IsNullOrEmpty(displayString) ? "E" : displayString;
+        }
     }
 
     public void SetIcon(Sprite sprite)
     {
-        if(promptImage != null)
+        if (promptImage != null)
         {
             promptImage.sprite = sprite;
         }
+
     }
 }

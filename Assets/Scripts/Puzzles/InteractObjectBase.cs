@@ -14,7 +14,7 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
 
     private InteractPromptUI _prompt;
 
-    protected bool AttempInteractLock()
+    protected bool AttemptInteractLock()
     {
         if (isInteractLocked)
         {
@@ -25,7 +25,7 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
 
     }
 
-    protected void unlockInteract() => isInteractLocked = false;
+    protected void UnlockInteract() => isInteractLocked = false;
 
 
     protected virtual void Awake()
@@ -33,10 +33,6 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
         rb = GetComponent<Rigidbody>();
         _prompt = GetComponent<InteractPromptUI>();
 
-        if(_prompt == null)
-        {
-            Debug.Log("no interact prompt");
-        }
     }
 
 
@@ -60,15 +56,12 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
         
     }
 
-    public virtual void OnHoverEnter(InputAction interactAction)
+    public virtual void OnHoverEnter(string buttonPrompt)
     {
-        _prompt?.Show(interactAction);
+        _prompt?.Show(buttonPrompt);
     }
 
-    public virtual void OnHoverEnter()
-    {
-        _prompt?.Show(null);
-    }
+
 
     public virtual void OnHoverExit()
     {

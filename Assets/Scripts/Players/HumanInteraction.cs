@@ -10,16 +10,18 @@ public class HumanInteraction : MonoBehaviour
     public InputActionReference actionReference;
 
     private IInteractable _closestInteract;
-    private InputAction _interactAction;
+    private string _buttonPrompt;
 
 
 
 
     private void Awake()
     {
-        if (actionReference != null)
+        _buttonPrompt = "E";
+        if(actionReference != null)
         {
-            _interactAction = actionReference.action;
+            string display = actionReference.action.GetBindingDisplayString(InputBinding.DisplayStringOptions.DontIncludeInteractions);
+            _buttonPrompt = string.IsNullOrEmpty(display) ? "E" : display;
         }
     }
 
@@ -27,6 +29,21 @@ public class HumanInteraction : MonoBehaviour
     {
         CheckClosestInteract();
     }
+
+    public void TryInteract()
+    {
+        if (_closestInteract == null)
+        {
+            return;
+        }
+        if (!_closestInteract.isInteractable)
+        {
+            return;
+        }
+        _closestInteract.OnInteract();
+    }
+
+
 
     private void CheckClosestInteract()
     {
@@ -36,20 +53,11 @@ public class HumanInteraction : MonoBehaviour
         {
             return;
         }
+        _closestInteract?.OnHoverExit();
 
         _closestInteract = closest;
 
-        if (_closestInteract != null)
-        {
-            if(_interactAction != null)
-            {
-                _closestInteract.OnHoverEnter(_interactAction);
-            }
-            else
-            {
-                _closestInteract.OnHoverEnter();
-            }
-        }
+        _closestInteract?.OnHoverEnter(_buttonPrompt);
     }
 
     private IInteractable FindClosest()

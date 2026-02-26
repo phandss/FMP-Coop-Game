@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class HumanController : MonoBehaviour
 {
@@ -10,40 +11,41 @@ public class HumanController : MonoBehaviour
     [SerializeField] private float sprintMultiplyer = 2;
 
     [SerializeField] private CharacterController controller;
-    [SerializeField]private Rigidbody rb;
-    private HumanInteraction _Interact;
-    private Vector2 moveInput;
-    private Vector3 velocity;
+    private HumanInteraction _interact;
+    private Vector2 _moveInput;
+    private Vector3 _velocity;
+    private bool _isSprinting;
 
     private void Awake()
     {
         controller = GetComponentInChildren<CharacterController>();
-        rb = GetComponentInChildren<Rigidbody>();
-        _Interact = GetComponent<HumanInteraction>();
+        _interact = GetComponent<HumanInteraction>();
+
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        _moveInput = context.ReadValue<Vector2>();
     }
 
     public void Jump(InputAction.CallbackContext context) 
     {
         if(context.performed && controller.isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
 
     public void Sprint(InputAction.CallbackContext context)
     {
-        if (controller.isGrounded && context.started)
-        {
-            speed = speed * sprintMultiplyer;
+        if (context.started)
+        { 
+            _isSprinting = true;
         }
-        if(controller.isGrounded && context.canceled)
-        {
-            speed = speed / sprintMultiplyer;
+
+        if(context.canceled)
+        { 
+            _isSprinting = false;
         }
     }
 
@@ -53,13 +55,16 @@ public class HumanController : MonoBehaviour
         {
             return;
         }
-
-        _Interact?.TriggerInteract();
+        Debug.Log("interact key pressed");
+        _interact?.TryInteract();
     }
 
     private void FixedUpdate()
     {
-        Vector3 movement = new Vector3(moveInput.x, 0, moveInput.y);
+        
+
+        float currentSpeed = _isSprinting ? speed * sprintMultiplyer : speed;
+        Vector3 movement = new Vector3(_moveInput.x, 0, _moveInput.y);
 
         if (movement != Vector3.zero)
         {
@@ -67,12 +72,18 @@ public class HumanController : MonoBehaviour
         }
 
         if (!controller.isGrounded)
-            velocity.y += gravity * Time.fixedDeltaTime;
-        else if (velocity.y < 0)
-            velocity.y = -2f;
+        {
+            _velocity.y += gravity * Time.deltaTime;
+        }
 
-        Vector3 finalMove = (movement * speed) + new Vector3(0, velocity.y, 0);
-        controller.Move(finalMove * Time.fixedDeltaTime);
+        else if (_velocity.y < 0)
+        {
+            _velocity.y = -2f;
+        }
+
+
+        Vector3 finalMove = (movement * speed) + new Vector3(0, _velocity.y, 0);
+        controller.Move(finalMove * Time.deltaTime);
 
 
     }
