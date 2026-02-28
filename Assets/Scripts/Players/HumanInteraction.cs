@@ -4,13 +4,18 @@ using UnityEngine.InputSystem;
 
 public class HumanInteraction : MonoBehaviour
 {
-    public float interactRange = 2f;
-    public LayerMask interactLayer;
+    [SerializeField] private Transform carryPoint;
 
+    public float interactRange = 2f;
+    public float holdThreshold = 0.3f;
+    public LayerMask interactLayer;
     public InputActionReference actionReference;
 
     private IInteractable _closestInteract;
+    private IInteractable _pressedInteractable;
     private string _buttonPrompt;
+    private float _pressTime;
+    private bool _isCarrying;
 
 
 
@@ -28,19 +33,52 @@ public class HumanInteraction : MonoBehaviour
     private void Update()
     {
         CheckClosestInteract();
+
+        if(_pressedInteractable != null)
+        {
+            UpdateHoldCheck();
+        }
     }
 
-    public void TryInteract()
+    private void UpdateHoldCheck()
+    {
+        bool confirmedHold = (Time.time - _pressTime) >= holdThreshold;
+
+        if(!_isCarrying && confirmedHold && _pressedInteractable.isDraggable)
+        {
+            _isCarrying = true;
+            _pressedInteractable.OnDragStart(carryPoint.position);
+        }
+    }
+
+    public void OnInteractStart()
     {
         if (_closestInteract == null)
         {
             return;
         }
-        if (!_closestInteract.isInteractable)
+        _pressedInteractable = _closestInteract;
+        _pressTime = Time.time;
+        _isCarrying = false;
+    }
+
+    public void OnInteractEnd()
+    {
+        if(_pressedInteractable == null)
         {
             return;
         }
-        _closestInteract.OnInteract();
+        if (_isCarrying)
+        {
+            _pressedInteractable.OnDragEnd();
+        }
+        else if (_pressedInteractable.isInteractable)
+        {
+            _pressedInteractable.OnInteract();
+        }
+
+        _pressedInteractable = null;
+        _isCarrying = false;
     }
 
 

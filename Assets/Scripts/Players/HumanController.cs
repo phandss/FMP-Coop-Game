@@ -51,12 +51,14 @@ public class HumanController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (!context.performed)
+        if (context.started)
         {
-            return;
+            _interact?.OnInteractStart();
         }
-        Debug.Log("interact key pressed");
-        _interact?.TryInteract();
+        if(context.canceled)
+        {
+            _interact?.OnInteractEnd();
+        }
     }
 
     private void FixedUpdate()
