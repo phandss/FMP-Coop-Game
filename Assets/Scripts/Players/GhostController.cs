@@ -72,13 +72,14 @@ public class GhostController : MonoBehaviour
 
     private void UpdateDragCheck()
     {
-        bool heldLongEnough = (Time.time - _pressTime) >= holdThreshold;
+        bool confirmedHold = (Time.time - _pressTime) >= holdThreshold;
 
-        if (!_isDragging && heldLongEnough && _pressedInteractable.isDraggable)
+        if (!_isDragging && confirmedHold && _pressedInteractable.isDraggable)
         {
 
             _isDragging = true;
             _pressedInteractable.OnDragStart(GetMouseWorldOnPlane());
+            Debug.Log("Ghost started dragging " + _pressedInteractable);
         }
 
         if (_isDragging)

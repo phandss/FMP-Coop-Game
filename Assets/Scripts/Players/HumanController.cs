@@ -61,6 +61,7 @@ public class HumanController : MonoBehaviour
         }
     }
 
+
     private void FixedUpdate()
     {
         
