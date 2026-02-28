@@ -26,14 +26,13 @@ public class GhostController : MonoBehaviour
         {
             mainCam = Camera.main;
         }
-        if(actionReference == null)
+
+        if (actionReference != null)
         {
-            if (actionReference != null)
-            {
-                string display = actionReference.action.GetBindingDisplayString(InputBinding.DisplayStringOptions.DontIncludeInteractions);
-                _buttonPrompt = string.IsNullOrEmpty(display) ? "LMB" : display;
-            }
+            string display = actionReference.action.GetBindingDisplayString(InputBinding.DisplayStringOptions.DontIncludeInteractions);
+            _buttonPrompt = string.IsNullOrEmpty(display) ? "LMB" : display;
         }
+        
     }
 
     private void Update()
@@ -51,7 +50,7 @@ public class GhostController : MonoBehaviour
 
     private void HoverUpdate()
     {
-        if (_isDragging) return;
+
 
         Ray ray = GetRaycast();
         IInteractable hit = null;
@@ -96,11 +95,14 @@ public class GhostController : MonoBehaviour
         { 
             HandleMouseDown(); 
 
+
         }
         if (context.canceled)
         { 
-            HandleMouseUp(); 
+            HandleMouseUp();
+
         }
+
     }
 
     private void HandleMouseUp()
@@ -129,34 +131,29 @@ public class GhostController : MonoBehaviour
     private void HandleMouseDown()
     {
         Ray ray = GetRaycast();
-        Debug.DrawRay(ray.origin, ray.direction, Color.green, 1000);
-        Debug.Log("mouse clicked");
 
-        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, interactLayer))
-        { 
-            return;
-        }
-
-
-        IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
-
-        if (interactable == null)
-        { 
-            return; 
-        }
-
-        Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green, 2f);
-
-        _pressedInteractable = interactable;
-        _pressTime = Time.time;
-        _isDragging = false;
-
-        if (interactable.isDraggable)
+        if(Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, interactLayer))
         {
-            Vector3 objectPos = hit.collider.transform.position;
-            _dragPlane = new Plane(Vector3.up, objectPos);
-            _dragOffset = objectPos - hit.point;
+            Debug.DrawLine(ray.origin, hit.point, Color.green, 2f);
+            IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
+            if (interactable != null)
+            {
+                _pressedInteractable = interactable;
+                _pressTime = Time.time;
+                _isDragging = false;
+                if (interactable.isDraggable)
+                {
+                    Vector3 objectPos = hit.collider.transform.position;
+                    _dragPlane = new Plane(Vector3.up, objectPos);
+                    _dragOffset = objectPos - hit.point;
+                }
+            }
         }
+        else
+        {
+            Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
+        }
+
     }
 
 

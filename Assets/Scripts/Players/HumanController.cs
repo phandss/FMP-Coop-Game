@@ -82,7 +82,7 @@ public class HumanController : MonoBehaviour
         }
 
 
-        Vector3 finalMove = (movement * speed) + new Vector3(0, _velocity.y, 0);
+        Vector3 finalMove = (movement * currentSpeed) + new Vector3(0, _velocity.y, 0);
         controller.Move(finalMove * Time.deltaTime);
 
 
