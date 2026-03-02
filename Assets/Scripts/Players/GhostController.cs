@@ -9,6 +9,9 @@ public class GhostController : MonoBehaviour
     [SerializeField]private LayerMask interactLayer;
     [SerializeField]private float holdThreshold = 0.2f;
     [SerializeField]private InputActionReference actionReference;
+    [SerializeField] private float scrollSpeed = 10f;
+    [SerializeField] private float minCarryHeight = .2f;
+    [SerializeField] private float maxCarryHeight = 10f;
 
     private string _buttonPrompt = "LMB";
 
@@ -17,7 +20,8 @@ public class GhostController : MonoBehaviour
     private bool _isDragging;
     private float _pressTime;
     private Plane _dragPlane;
-    private Vector3 _dragOffset;
+    private Vector2 _dragOffset;
+    private float _currentCarryHeight = 2f;
 
     private void Awake()
     {
@@ -37,7 +41,7 @@ public class GhostController : MonoBehaviour
 
     private void Update()
     {
-        if (_isDragging)
+        if (!_isDragging)
         {
             HoverUpdate();
         }
@@ -84,10 +88,22 @@ public class GhostController : MonoBehaviour
 
         if (_isDragging)
         {
-            _pressedInteractable.OnDrag(GetMouseWorldOnPlane() + _dragOffset);
+            float scroll = Mouse.current.scroll.ReadValue().y;
+
+            if (scroll != 0f)
+            {
+                _currentCarryHeight = Mathf.Clamp(_currentCarryHeight - scroll * scrollSpeed * Time.deltaTime, minCarryHeight, maxCarryHeight);
+                _dragPlane = new Plane(Vector3.up, new Vector3(0f, _currentCarryHeight, 0f));
+            }
+            _pressedInteractable.OnDrag(BuildDragPosition());
         }
     }
 
+    private Vector3 BuildDragPosition()
+    {
+        Vector3 mouseWorld = GetMouseWorldOnPlane();
+        return new Vector3(mouseWorld.x + _dragOffset.x, _currentCarryHeight, mouseWorld.z + _dragOffset.y);
+    }
 
     public void Click(InputAction.CallbackContext context) 
     {
@@ -133,7 +149,7 @@ public class GhostController : MonoBehaviour
     {
         Ray ray = GetRaycast();
 
-        if(Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, interactLayer))
+        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, interactLayer))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.green, 2f);
             IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
@@ -142,11 +158,13 @@ public class GhostController : MonoBehaviour
                 _pressedInteractable = interactable;
                 _pressTime = Time.time;
                 _isDragging = false;
+
                 if (interactable.isDraggable)
                 {
                     Vector3 objectPos = hit.collider.transform.position;
-                    _dragPlane = new Plane(Vector3.up, objectPos);
-                    _dragOffset = objectPos - hit.point;
+                    _currentCarryHeight = objectPos.y;
+                    _dragOffset = new Vector2(objectPos.x - hit.point.x, objectPos.z - hit.point.z);
+                    _dragPlane = new Plane(Vector3.up, new Vector3(0f, _currentCarryHeight, 0f));
                 }
             }
         }
@@ -154,8 +172,8 @@ public class GhostController : MonoBehaviour
         {
             Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
         }
-
     }
+
 
 
 

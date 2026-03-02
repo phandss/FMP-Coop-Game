@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent (typeof(Rigidbody))]
+
 public abstract class InteractObjectBase : MonoBehaviour, IInteractable
 {
     public abstract bool isInteractable { get; }

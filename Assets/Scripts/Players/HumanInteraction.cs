@@ -51,6 +51,7 @@ public class HumanInteraction : MonoBehaviour
         if(!_interactablesInRange.Contains(interactable))
         {
             _interactablesInRange.Add(interactable);
+            Debug.Log($"[HumanInteraction] Added interactable: {interactable} — total in range: {_interactablesInRange.Count}");
 
         }
     }
