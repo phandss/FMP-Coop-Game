@@ -18,6 +18,7 @@ public class HumanInteraction : MonoBehaviour
 
     private IInteractable _closestInteract;
     private IInteractable _pressedInteractable;
+    private IMoveable _pressedMoveable;
     private string _buttonPrompt;
     private float _pressTime;
     private bool _isCarrying;
@@ -81,15 +82,15 @@ public class HumanInteraction : MonoBehaviour
     {
         bool confirmedHold = (Time.time - _pressTime) >= holdThreshold;
 
-        if(!_isCarrying && confirmedHold && _pressedInteractable.isDraggable)
+        if(!_isCarrying && confirmedHold && _pressedMoveable != null)
         {
             _isCarrying = true;
-            _pressedInteractable.OnDragStart(carryPoint.position);
+            _pressedMoveable.OnDragStart(carryPoint.position);
         }
 
         if(_isCarrying)
         {
-            _pressedInteractable.OnDrag(carryPoint.position);
+            _pressedMoveable.OnDrag(carryPoint.position);
         }
     }
 
@@ -100,6 +101,7 @@ public class HumanInteraction : MonoBehaviour
             return;
         }
         _pressedInteractable = _closestInteract;
+        _pressedMoveable = _pressedInteractable as IMoveable;
         _pressTime = Time.time;
         _isCarrying = false;
     }
@@ -113,7 +115,7 @@ public class HumanInteraction : MonoBehaviour
         }
         if (_isCarrying)
         {
-            _pressedInteractable.OnDragEnd();
+            _pressedMoveable.OnDragEnd();
         }
         else if (_pressedInteractable.isInteractable)
         {
@@ -121,6 +123,7 @@ public class HumanInteraction : MonoBehaviour
         }
 
         _pressedInteractable = null;
+        _pressedMoveable = null;
         _isCarrying = false;
     }
 

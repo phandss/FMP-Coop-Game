@@ -9,22 +9,22 @@ public class MainMenu : MonoBehaviour
 
     public GameObject _controlsMenu;
 
-    void PlayButton()
+    public void PlayButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    void ControlsButton()
+    public void ControlsButton()
     {
         _controlsMenu.SetActive(true);
     }
 
-    void QuitButton()
+    public void QuitButton()
     {
         Application.Quit();
     }
 
-    void ReturnButton()
+    public void ReturnButton()
     {
         _controlsMenu.SetActive(false);
     }

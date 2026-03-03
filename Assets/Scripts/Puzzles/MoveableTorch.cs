@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class MoveableTorch : InteractObjectBase
+public class MoveableTorch : InteractObjectBase, IMoveable
 {
     public override bool isInteractable => true;
-    public override bool isDraggable => true;
+
 
     private bool _beingCarried;
 
     [SerializeField] private float _carryForce = 10f;
 
-    public override void OnDragStart(Vector3 pos)
+    public void OnDragStart(Vector3 pos)
     {
 
         if (!AttemptInteractLock())
@@ -26,7 +26,7 @@ public class MoveableTorch : InteractObjectBase
 
     }
 
-    public override void OnDrag(Vector3 worldPos)
+    public void OnDrag(Vector3 worldPos)
     {
 
         if (!_beingCarried)
@@ -39,7 +39,7 @@ public class MoveableTorch : InteractObjectBase
 
 
 
-    public override void OnDragEnd()
+    public void OnDragEnd()
     {
         if (!_beingCarried)
         {

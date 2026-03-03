@@ -11,7 +11,6 @@ public class InteractDoor : InteractObjectBase
     [SerializeField] private float openTimer = .8f;
 
     public override bool isInteractable => !_isAnimating && !_isLocked;
-    public override bool isDraggable => false;
 
     private bool _isAnimating;
     private bool _isOpen;

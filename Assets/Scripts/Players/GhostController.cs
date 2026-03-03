@@ -17,6 +17,7 @@ public class GhostController : MonoBehaviour
 
     private IInteractable _hoveredInteractable;
     private IInteractable _pressedInteractable;
+    private IMoveable _pressedMoveable;
     private bool _isDragging;
     private float _pressTime;
     private Plane _dragPlane;
@@ -78,11 +79,11 @@ public class GhostController : MonoBehaviour
     {
         bool confirmedHold = (Time.time - _pressTime) >= holdThreshold;
 
-        if (!_isDragging && confirmedHold && _pressedInteractable.isDraggable)
+        if (!_isDragging && confirmedHold && _pressedMoveable != null)
         {
 
             _isDragging = true;
-            _pressedInteractable.OnDragStart(GetMouseWorldOnPlane());
+            _pressedMoveable.OnDragStart(GetMouseWorldOnPlane());
             Debug.Log("Ghost started dragging " + _pressedInteractable);
         }
 
@@ -95,7 +96,7 @@ public class GhostController : MonoBehaviour
                 _currentCarryHeight = Mathf.Clamp(_currentCarryHeight - scroll * scrollSpeed * Time.deltaTime, minCarryHeight, maxCarryHeight);
                 _dragPlane = new Plane(Vector3.up, new Vector3(0f, _currentCarryHeight, 0f));
             }
-            _pressedInteractable.OnDrag(BuildDragPosition());
+            _pressedMoveable.OnDrag(BuildDragPosition());
         }
     }
 
@@ -125,21 +126,22 @@ public class GhostController : MonoBehaviour
     private void HandleMouseUp()
     {
         if (_pressedInteractable == null)
-        {
+        { 
             return;
         }
 
         if (_isDragging)
         {
-            _pressedInteractable.OnDragEnd();
+            _pressedMoveable.OnDragEnd();
         }
-        else
-        {
-            if (_pressedInteractable.isInteractable)
-                _pressedInteractable.OnInteract();
+
+        else if (_pressedInteractable.isInteractable)
+        { 
+            _pressedInteractable.OnInteract();
         }
 
         _pressedInteractable = null;
+        _pressedMoveable = null;        // NEW: clear both references
         _isDragging = false;
     }
 
@@ -148,29 +150,33 @@ public class GhostController : MonoBehaviour
     private void HandleMouseDown()
     {
         Ray ray = GetRaycast();
-
-        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, interactLayer))
-        {
-            Debug.DrawLine(ray.origin, hit.point, Color.green, 2f);
-            IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
-            if (interactable != null)
-            {
-                _pressedInteractable = interactable;
-                _pressTime = Time.time;
-                _isDragging = false;
-
-                if (interactable.isDraggable)
-                {
-                    Vector3 objectPos = hit.collider.transform.position;
-                    _currentCarryHeight = objectPos.y;
-                    _dragOffset = new Vector2(objectPos.x - hit.point.x, objectPos.z - hit.point.z);
-                    _dragPlane = new Plane(Vector3.up, new Vector3(0f, _currentCarryHeight, 0f));
-                }
-            }
-        }
-        else
+        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, interactLayer))
         {
             Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
+            return;
+        }
+
+        Debug.DrawLine(ray.origin, hit.point, Color.green, 2f);
+
+        IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
+        if (interactable == null) 
+        { 
+            return; 
+        }
+
+        _pressedInteractable = interactable;
+
+        _pressedMoveable = hit.collider.GetComponentInParent<IMoveable>();
+        _pressTime = Time.time;
+        _isDragging = false;
+
+
+        if (_pressedMoveable != null)
+        {
+            Vector3 objectPos = hit.collider.transform.position;
+            _currentCarryHeight = objectPos.y;
+            _dragOffset = new Vector2(objectPos.x - hit.point.x, objectPos.z - hit.point.z);
+            _dragPlane = new Plane(Vector3.up, new Vector3(0f, _currentCarryHeight, 0f));
         }
     }
 

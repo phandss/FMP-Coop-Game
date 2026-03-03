@@ -1,15 +1,13 @@
 using UnityEngine;
 
-public class TestBox : InteractObjectBase
+public class TestBox : InteractObjectBase, IMoveable
 {
     public override bool isInteractable => true;
-    public override bool isDraggable => true;
 
-    private bool _beingCarried;
 
     [SerializeField] private float _carryForce = 10f;
 
-    public override void OnDragStart(Vector3 pos)
+    public void OnDragStart(Vector3 pos)
     {
 
         if (!AttemptInteractLock())
@@ -17,7 +15,7 @@ public class TestBox : InteractObjectBase
             return;
         }
 
-        _beingCarried = true;
+
 
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         rb.useGravity = false;
@@ -26,10 +24,10 @@ public class TestBox : InteractObjectBase
 
     }
 
-    public override void OnDrag(Vector3 worldPos)
+    public void OnDrag(Vector3 worldPos)
     {
 
-        if (!_beingCarried)
+        if(!isInteractLocked)
         {
             return;
         }
@@ -39,14 +37,12 @@ public class TestBox : InteractObjectBase
 
 
 
-    public override void OnDragEnd()
+    public void OnDragEnd()
     {
-        if (!_beingCarried)
+        if (!isInteractLocked)
         {
             return;
         }
-        _beingCarried = false;
-
         rb.useGravity = true;
         rb.linearDamping = 0f;
         rb.collisionDetectionMode = CollisionDetectionMode.Discrete;

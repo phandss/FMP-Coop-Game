@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public abstract class InteractObjectBase : MonoBehaviour, IInteractable
 {
     public abstract bool isInteractable { get; }
-    public abstract bool isDraggable { get; }
 
     protected bool isInteractLocked {get; private set;}
 
@@ -41,20 +40,7 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
 
     }
 
-    public virtual void OnDragStart(Vector3 hitpoint)
-    {
 
-    }
-
-    public virtual void OnDrag(Vector3 worldPos)
-    {
-        
-    }
-
-    public virtual void OnDragEnd()
-    {
-        
-    }
 
     public virtual void OnHoverEnter(string buttonPrompt)
     {
