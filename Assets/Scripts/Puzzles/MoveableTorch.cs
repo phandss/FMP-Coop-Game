@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestBox : InteractObjectBase
+public class MoveableTorch : InteractObjectBase
 {
     public override bool isInteractable => true;
     public override bool isDraggable => true;
@@ -53,11 +53,6 @@ public class TestBox : InteractObjectBase
         rb.linearVelocity = Vector3.zero;
         UnlockInteract();
 
-    }
-
-    public override void OnInteract()
-    {
-        Debug.Log("Interacted with box");
     }
 
 
