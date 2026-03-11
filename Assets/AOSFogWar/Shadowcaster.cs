@@ -167,7 +167,7 @@ namespace FischlWorks_FogWar
                     }
                     else
                     {
-                        Debug.LogErrorFormat("index given in y axis is out of range");
+                        //Debug.LogErrorFormat("index given in y axis is out of range");
 
                         return ETileVisibility.Hidden;
                     }

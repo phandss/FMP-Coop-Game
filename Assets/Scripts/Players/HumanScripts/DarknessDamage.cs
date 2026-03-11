@@ -14,17 +14,13 @@ public class DarknessDamage : MonoBehaviour
     private void Awake()
     {
         _humanHealth = GetComponent<HumanHealth>();
+        //_warFog = GetComponent<csFogWar>();
 
     }
 
     private void Update()
     {
-        if(_warFog == null || _humanHealth == null || _humanHealth.IsDead)
-        {
-            return;
-        }
-
-        if(_warFog.CheckVisibility(transform.position, 0))
+        if(_warFog == null || _humanHealth == null || _humanHealth.IsDead || _warFog.CheckVisibility(transform.position, 0))
         {
             return;
         }
@@ -37,4 +33,6 @@ public class DarknessDamage : MonoBehaviour
             _damageTimer = 0f;
         }
     }
+
+    
 }
