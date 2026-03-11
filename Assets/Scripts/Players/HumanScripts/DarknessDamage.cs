@@ -1,0 +1,40 @@
+using FischlWorks_FogWar;
+using UnityEngine;
+
+public class DarknessDamage : MonoBehaviour
+{
+    [SerializeField] private csFogWar _warFog;
+    [SerializeField] private float _damagePerSecond = 10f;
+    [SerializeField] private float _damageInterval = 1f;
+
+    private HumanHealth _humanHealth;
+    private float _damageTimer;
+
+
+    private void Awake()
+    {
+        _humanHealth = GetComponent<HumanHealth>();
+
+    }
+
+    private void Update()
+    {
+        if(_warFog == null || _humanHealth == null || _humanHealth.IsDead)
+        {
+            return;
+        }
+
+        if(_warFog.CheckVisibility(transform.position, 0))
+        {
+            return;
+        }
+
+        _damageTimer += Time.deltaTime;
+
+        if(_damageTimer >= _damageInterval)
+        {
+            _humanHealth.TakeDamage(_damagePerSecond * _damageInterval);
+            _damageTimer = 0f;
+        }
+    }
+}

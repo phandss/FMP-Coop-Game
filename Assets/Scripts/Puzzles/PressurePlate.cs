@@ -1,16 +1,59 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private TrapBase _trap;
+    [SerializeField] private float _reactivationDelay = 1f;
+
+    private bool _isActivated = false;
+    private Coroutine _reactivationCoroutine;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (_isActivated)
+        {
+            return;
+        }
+
+        _isActivated = true;
+        _trap.Activate();
+        Debug.Log($"Pressure plate activated by {other.name}");
+
+        if (_trap.canReactivate)
+        {
+            _reactivationCoroutine = StartCoroutine(ReactivateAfterDelay());
+        }
+
+        _trap.Deactivate();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnTriggerExit(Collider other)
     {
-        
+        if(!_isActivated)
+        {
+            return;
+        }
+
+        _isActivated = false;
+
+        if(_reactivationCoroutine != null)
+        {
+            StopCoroutine(_reactivationCoroutine);
+            _reactivationCoroutine = null;
+        }
+
+        _trap.Deactivate();
+    }
+    
+    private IEnumerator ReactivateAfterDelay()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(_reactivationDelay);
+            _isActivated = false;
+        }
     }
 }

@@ -1,9 +1,6 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
-public class HumanController : MonoBehaviour
+public class HumanMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpHeight = 2f;
@@ -11,60 +8,36 @@ public class HumanController : MonoBehaviour
     [SerializeField] private float sprintMultiplyer = 2;
 
     [SerializeField] private CharacterController controller;
-    private HumanInteraction _interact;
     private Vector2 _moveInput;
     private Vector3 _velocity;
     private bool _isSprinting;
 
-    private void Awake()
+    void Awake()
     {
         controller = GetComponentInChildren<CharacterController>();
-        _interact = GetComponent<HumanInteraction>();
-
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void SetMoveInput(Vector2 input)
     {
-        _moveInput = context.ReadValue<Vector2>();
+        _moveInput = input;
     }
 
-    public void Jump(InputAction.CallbackContext context) 
+    public void SetSprinting(bool isSprinting)
     {
-        if(context.performed && controller.isGrounded)
+        _isSprinting = isSprinting;
+    }
+
+    public void TryJump()
+    {
+        if(controller.isGrounded)
         {
             _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
 
-    public void Sprint(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        { 
-            _isSprinting = true;
-        }
-
-        if(context.canceled)
-        { 
-            _isSprinting = false;
-        }
-    }
-
-    public void OnInteract(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            _interact?.OnInteractStart();
-        }
-        if(context.canceled)
-        {
-            _interact?.OnInteractEnd();
-        }
-    }
-
-
     private void FixedUpdate()
     {
-        
+
 
         float currentSpeed = _isSprinting ? speed * sprintMultiplyer : speed;
         Vector3 movement = new Vector3(_moveInput.x, 0, _moveInput.y);
