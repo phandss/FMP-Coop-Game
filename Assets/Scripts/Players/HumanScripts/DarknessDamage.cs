@@ -25,11 +25,16 @@ public class DarknessDamage : MonoBehaviour
             return;
         }
 
+        if(!_warFog.CheckWorldGridRange(transform.position))
+        {
+            return;
+        }
+
         _damageTimer += Time.deltaTime;
 
         if(_damageTimer >= _damageInterval)
         {
-            _humanHealth.TakeDamage(_damagePerSecond * _damageInterval);
+            _humanHealth.TakeDamage(_damagePerSecond);
             _damageTimer = 0f;
         }
     }

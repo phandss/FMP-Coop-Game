@@ -1,16 +1,14 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpikeBall : MonoBehaviour
+public class SpikeBallDamage : MonoBehaviour
 {
     [SerializeField] private float damage;
     [SerializeField] private float _maxLifeSpan;
-    private float _currentLifeSpan;
 
 
     private void Awake()
     {
-        _currentLifeSpan = Time.time;
+        Destroy(gameObject, _maxLifeSpan);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,12 +19,6 @@ public class SpikeBall : MonoBehaviour
         {
             _health.TakeDamage(damage);
         }
-
-        if(_maxLifeSpan <= _currentLifeSpan)
-        {
-            Destroy(gameObject);
-        }
-
 
     }
 }

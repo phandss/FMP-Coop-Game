@@ -4,7 +4,14 @@ public class SpikeBallSpawner : TrapBase
 {
     [SerializeField] private Transform _spawnPos;
     [SerializeField] private GameObject SpikeBallPrefab;
+    [SerializeField] private float _spawnAmount = 5f;
 
+    private Bounds _bounds;
+
+    private void Awake()
+    {
+        _bounds = GetComponent<Collider>().bounds;
+    }
 
 
     public override void Activate()
@@ -14,7 +21,16 @@ public class SpikeBallSpawner : TrapBase
         {
             return;
         }
-        GameObject ballPrefab = Instantiate(SpikeBallPrefab, _spawnPos.position, _spawnPos.rotation);
+
+
+        for (int i = 0; i < _spawnAmount; i++)
+        {
+            float offsetX = Random.Range(-_bounds.extents.x, _bounds.extents.x);
+            float offsetZ = Random.Range(-_bounds.extents.z, _bounds.extents.z);
+            float offsetY = Random.Range(-_bounds.extents.y, _bounds.extents.y);
+
+            GameObject spikeBall = Instantiate(SpikeBallPrefab, _spawnPos.position + new Vector3(offsetX, offsetY, offsetZ), Quaternion.identity);
+        }
     }
 
 }

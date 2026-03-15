@@ -16,10 +16,10 @@ public class PressurePlate : MonoBehaviour
         {
             return;
         }
-
+        Debug.Log($"Pressure plate activated by {other.name}");
         _isActivated = true;
         _trap.Activate();
-        Debug.Log($"Pressure plate activated by {other.name}");
+
 
         if (_trap.canReactivate)
         {
