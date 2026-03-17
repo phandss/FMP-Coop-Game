@@ -3,59 +3,71 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     [SerializeField] private WaypointPath _waypointPath;
-    [SerializeField] private float _speed;
-    
-    private int _targetWaypointIndex;
+    [SerializeField] private float _speed = 2f;
 
-    private Transform _prevWaypoint;
-    private Transform _targetWaypoint;
+    private Transform origin;
+    private Transform currentTarget;
 
-    private float _timeToNextWaypoint;
-    private float _elapsedTime;
+    private int targetIndex = 1;
+
+    private bool isMoving = false;
+    private bool isReturning = false;
 
     private void Start()
     {
-        TargetNextWaypoint();
+        origin = _waypointPath.GetWayPoint(0);
+        currentTarget = _waypointPath.GetWayPoint(targetIndex);
     }
 
     private void Update()
     {
-        MoveToNext();
-    }
-
-    private void MoveToNext()
-    {
-        _elapsedTime += Time.deltaTime;
-        float elapsedPercentage = _elapsedTime / _timeToNextWaypoint;
-        transform.position = Vector3.Lerp(_prevWaypoint.position, _targetWaypoint.position, elapsedPercentage);
-
-        if (elapsedPercentage >= 1)
+        if(!isMoving)
         {
-            TargetNextWaypoint();
+            return;
+        }
+
+        Transform destination;
+
+        if(isReturning)
+        {
+            destination = _waypointPath.GetWayPoint(0);
+        }
+        else
+        {
+            destination = currentTarget;
+        }
+        //move towards destination
+        transform.position = Vector3.MoveTowards(transform.position, destination.position, _speed * Time.deltaTime);
+
+        if(transform.position == destination.position)
+        {
+            if(isReturning)
+            {
+                //reset to origin
+                isReturning = false;
+                isMoving = false;
+            }
+            else
+            {
+                //move to next waypoint
+                targetIndex = _waypointPath.GetNextWaypointIndex(targetIndex);
+                currentTarget = _waypointPath.GetWayPoint(targetIndex);
+            }
         }
     }
 
-    private void TargetNextWaypoint()
-    {
-        _prevWaypoint = _waypointPath.GetWayPoint(_targetWaypointIndex);
-        _targetWaypointIndex = _waypointPath.GetNextWaypointIndex(_targetWaypointIndex);
-        _targetWaypoint = _waypointPath.GetWayPoint(_targetWaypointIndex);
-        
-        _elapsedTime = 0f;
 
-        float distanceToNextWaypoint = Vector3.Distance(_prevWaypoint.position, _targetWaypoint.position);
-
-        _timeToNextWaypoint = distanceToNextWaypoint / _speed;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         other.transform.SetParent(transform);
-        MoveToNext();
+        isReturning = false;
+        isMoving = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         other.transform.SetParent(null);
+        isReturning = true;
     }
 }
