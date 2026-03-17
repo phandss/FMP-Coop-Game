@@ -20,6 +20,11 @@ public class MovingPlatform : MonoBehaviour
 
     private void Update()
     {
+        MoveToNext();
+    }
+
+    private void MoveToNext()
+    {
         _elapsedTime += Time.deltaTime;
         float elapsedPercentage = _elapsedTime / _timeToNextWaypoint;
         transform.position = Vector3.Lerp(_prevWaypoint.position, _targetWaypoint.position, elapsedPercentage);
@@ -46,6 +51,7 @@ public class MovingPlatform : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.transform.SetParent(transform);
+        MoveToNext();
     }
 
     private void OnTriggerExit(Collider other)

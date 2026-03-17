@@ -149,13 +149,27 @@ public class GhostController : MonoBehaviour
     private void HandleMouseDown()
     {
         Ray ray = GetRaycast();
-        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, _interactLayer))
+        RaycastHit hit;
+        if (!Physics.Raycast(ray, out hit, Mathf.Infinity, _interactLayer))
         {
             Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
             return;
         }
 
         Debug.DrawLine(ray.origin, hit.point, Color.green, 2f);
+
+        Fracture fracture = hit.collider.GetComponentInParent<Fracture>();
+        if (fracture != null)
+        {
+            Rigidbody rb = fracture.GetComponent<Rigidbody>();
+            if(rb != null)
+            {
+                rb.isKinematic = false;
+                rb.useGravity = true;
+            }
+            fracture.CauseFracture();
+            return;
+        }
 
         IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
         if (interactable == null) 
