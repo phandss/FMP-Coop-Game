@@ -4,45 +4,80 @@ using System;
 public class HumanHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
-    private float _currentHealth;
 
-    public float CurrentHealth => _currentHealth;
-    public bool IsDead => _currentHealth <= 0;
+    private float currentHealth; // actual health value
+
+    public float CurrentHealth
+    {
+        get { return currentHealth; }
+    }
+
+    public bool IsDead
+    {
+        get { return currentHealth <= 0f; }
+    }
 
     public event Action OnDeath;
     public event Action<float> OnHealthChanged;
 
     private void Awake()
     {
-        _currentHealth = maxHealth;
+        // start full health
+        currentHealth = maxHealth;
     }
 
     public void TakeDamage(float amount)
     {
         if (IsDead)
-        { 
+        {
+            // already dead so nothing to do
             return;
         }
 
-        _currentHealth = Mathf.Max(_currentHealth - amount, 0);
-        OnHealthChanged?.Invoke(_currentHealth);
+        // subtract damage
+        currentHealth -= amount;
 
-        Debug.Log($"Human took {amount} damage, current health: {_currentHealth}");
-
-        if (IsDead)
+        if (currentHealth < 0)
         {
-            OnDeath?.Invoke();
+            currentHealth = 0;
+        }
+
+        
+        if (OnHealthChanged != null)
+        {
+            OnHealthChanged.Invoke(currentHealth);
+        }
+
+        Debug.Log("Human took " + amount + " damage. Health now: " + currentHealth);
+
+        // check death after damage
+        if (currentHealth <= 0)
+        {
+            // TODO maybe add ragdoll or animation here
+            if (OnDeath != null)
+            {
+                OnDeath.Invoke();
+            }
         }
     }
 
     public void Heal(float amount)
     {
-            if (IsDead)
-            {
-                return;
-            }
-    
-            _currentHealth = Mathf.Min(_currentHealth + amount, maxHealth);
-            OnHealthChanged?.Invoke(_currentHealth);
+        if (IsDead)
+        {
+            return; // can't heal if dead
+        }
+
+        currentHealth += amount;
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        if (OnHealthChanged != null)
+        {
+            OnHealthChanged.Invoke(currentHealth);
+        }
     }
 }

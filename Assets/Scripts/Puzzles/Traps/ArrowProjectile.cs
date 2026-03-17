@@ -6,6 +6,7 @@ public class ArrowProjectile : MonoBehaviour
     [SerializeField] private float _damage = 10f;
     [SerializeField] private float _lifetime = 5f;
 
+
     private Rigidbody rb;
     private bool hasHit = false;
 
@@ -19,7 +20,8 @@ public class ArrowProjectile : MonoBehaviour
 
     public void Fire(Vector3 direction, float speed)
     {
-        rb.linearVelocity = direction.normalized * speed;
+        transform.rotation = Quaternion.Euler(0, 0, -90);
+        rb.linearVelocity = direction.normalized * speed;      
         Destroy(gameObject, _lifetime);
     }
 

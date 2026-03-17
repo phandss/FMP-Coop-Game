@@ -1,17 +1,16 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GhostController : MonoBehaviour
 {
 
-    [SerializeField]private Camera mainCam;
-    [SerializeField]private LayerMask interactLayer;
-    [SerializeField]private float holdThreshold = 0.2f;
-    [SerializeField]private InputActionReference actionReference;
-    [SerializeField] private float scrollSpeed = 10f;
-    [SerializeField] private float minCarryHeight = .2f;
-    [SerializeField] private float maxCarryHeight = 10f;
+    [SerializeField]private Camera _mainCam;
+    [SerializeField]private LayerMask _interactLayer;
+    [SerializeField]private float _holdThreshold = 0.2f;
+    [SerializeField]private InputActionReference _actionReference;
+    [SerializeField] private float _scrollSpeed = 10f;
+    [SerializeField] private float _minCarryHeight = .2f;
+    [SerializeField] private float _maxCarryHeight = 10f;
 
     private string _buttonPrompt = "LMB";
 
@@ -26,15 +25,15 @@ public class GhostController : MonoBehaviour
 
     private void Awake()
     {
-        mainCam = GetComponentInChildren<Camera>();
-        if(mainCam == null)
+        _mainCam = GetComponentInChildren<Camera>();
+        if(_mainCam == null)
         {
-            mainCam = Camera.main;
+            _mainCam = Camera.main;
         }
 
-        if (actionReference != null)
+        if (_actionReference != null)
         {
-            string display = actionReference.action.GetBindingDisplayString(InputBinding.DisplayStringOptions.DontIncludeInteractions);
+            string display = _actionReference.action.GetBindingDisplayString(InputBinding.DisplayStringOptions.DontIncludeInteractions);
             _buttonPrompt = string.IsNullOrEmpty(display) ? "LMB" : display;
         }
         
@@ -60,7 +59,7 @@ public class GhostController : MonoBehaviour
         Ray ray = GetRaycast();
         IInteractable hit = null;
 
-        if(Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity, interactLayer))
+        if(Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity, _interactLayer))
         {
             hit = hitInfo.collider.GetComponentInParent<IInteractable>();
         }
@@ -77,7 +76,7 @@ public class GhostController : MonoBehaviour
 
     private void UpdateDragCheck()
     {
-        bool confirmedHold = (Time.time - _pressTime) >= holdThreshold;
+        bool confirmedHold = (Time.time - _pressTime) >= _holdThreshold;
 
         if (!_isDragging && confirmedHold && _pressedMoveable != null)
         {
@@ -93,7 +92,7 @@ public class GhostController : MonoBehaviour
 
             if (scroll != 0f)
             {
-                _currentCarryHeight = Mathf.Clamp(_currentCarryHeight - scroll * scrollSpeed * Time.deltaTime, minCarryHeight, maxCarryHeight);
+                _currentCarryHeight = Mathf.Clamp(_currentCarryHeight - scroll * _scrollSpeed * Time.deltaTime, _minCarryHeight, _maxCarryHeight);
                 _dragPlane = new Plane(Vector3.up, new Vector3(0f, _currentCarryHeight, 0f));
             }
             _pressedMoveable.OnDrag(BuildDragPosition());
@@ -141,7 +140,7 @@ public class GhostController : MonoBehaviour
         }
 
         _pressedInteractable = null;
-        _pressedMoveable = null;        // NEW: clear both references
+        _pressedMoveable = null;
         _isDragging = false;
     }
 
@@ -150,7 +149,7 @@ public class GhostController : MonoBehaviour
     private void HandleMouseDown()
     {
         Ray ray = GetRaycast();
-        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, interactLayer))
+        if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, _interactLayer))
         {
             Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
             return;
@@ -188,7 +187,7 @@ public class GhostController : MonoBehaviour
     private Ray GetRaycast()
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
-        return mainCam.ScreenPointToRay(mousePos);
+        return _mainCam.ScreenPointToRay(mousePos);
     }
 
     private Vector3 GetMouseWorldOnPlane()
