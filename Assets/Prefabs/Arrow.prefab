@@ -239,8 +239,8 @@ Transform:
   m_GameObject: {fileID: 1959729250425484}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.4295, y: 4.4295, z: 4.4295}
+  m_LocalPosition: {x: 0.39671, y: -0.0016825, z: -0.0030058}
+  m_LocalScale: {x: 3.2940862, y: 3.2940862, z: 3.2940862}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4668755794025904}
@@ -262,7 +262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArrowProjectile
   _damage: 10
   _lifetime: 5
-  _rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!65 &7549902988253820430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -282,8 +281,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07051977, y: 0.918335, z: 0.068083234}
-  m_Center: {x: 0.0014817934, y: 0.349405, z: -0.0026473335}
+  m_Size: {x: 0.07051977, y: 0.25909558, z: 0.068083234}
+  m_Center: {x: 0.0014817944, y: 0.67902684, z: -0.0026473342}
 --- !u!54 &7724594620579580186
 Rigidbody:
   m_ObjectHideFlags: 0

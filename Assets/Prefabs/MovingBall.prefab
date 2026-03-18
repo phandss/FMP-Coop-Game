@@ -30,15 +30,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.189641
+      value: 2.4259539
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0022686
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 95.54819
+      value: 31.747635
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_LocalRotation.w
@@ -46,15 +46,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -79,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4389361564259024590}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3312712442135317369}
   m_SourcePrefab: {fileID: 100100000, guid: c455996f6e6b49d418895f41b5216202, type: 3}
 --- !u!1 &1330407642057107587 stripped
 GameObject:
@@ -180,3 +183,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e929ad28c9dff47a87a19732658505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpikeBallMovement
+  _forceStrength: 5
+--- !u!114 &3312712442135317369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330407642057107587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e813a2ddb1bf447a92dbd6aa2e8e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPickup
+  _carryForce: 10

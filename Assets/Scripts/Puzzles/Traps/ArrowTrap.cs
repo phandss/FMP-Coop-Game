@@ -19,6 +19,8 @@ public class ArrowTrap : TrapBase
         GameObject arrow = Instantiate(_arrowPrefab, transform.position, transform.rotation);
         ArrowProjectile projectile = arrow.GetComponent<ArrowProjectile>();
         projectile.Fire(transform.forward, _projSpeed);
+
+        Debug.Log("ArrowTrap activated: Fired an arrow.");
     }
 
 

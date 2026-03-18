@@ -27,17 +27,20 @@ public class ArrowProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Arrow hit: " + other.name);
+        HumanHealth health = other.GetComponentInParent<HumanHealth>();
+
+        if (health != null)
+        {
+            health.TakeDamage(_damage);
+        }
+
         if (hasHit)
         {
             return;
         }
 
-        HumanHealth health = other.GetComponent<HumanHealth>();
-
-        if(health != null)
-        {
-            health.TakeDamage(_damage);
-        }
+        
 
         Destroy(gameObject);
     }
