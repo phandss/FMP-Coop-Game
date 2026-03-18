@@ -570,15 +570,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f0dae79bb069647bf14f9e1dcc592f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostController
-  mainCam: {fileID: 2974928668201376451}
-  interactLayer:
+  _mainCam: {fileID: 0}
+  _interactLayer:
     serializedVersion: 2
     m_Bits: 8
-  holdThreshold: 0.2
-  actionReference: {fileID: 0}
-  scrollSpeed: 10
-  minCarryHeight: 0.2
-  maxCarryHeight: 10
+  _holdThreshold: 0.2
+  _actionReference: {fileID: 0}
+  _scrollSpeed: 10
+  _minCarryHeight: 0.2
+  _maxCarryHeight: 10
 --- !u!114 &6801592118486568493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,10 +732,5 @@ PrefabInstance:
 --- !u!4 &333926290255030542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2505527238658788183, guid: a77b5af7a84204b47bed88746ffb5ee0, type: 3}
-  m_PrefabInstance: {fileID: 2767237184183476825}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &2974928668201376451 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1093849495495964826, guid: a77b5af7a84204b47bed88746ffb5ee0, type: 3}
   m_PrefabInstance: {fileID: 2767237184183476825}
   m_PrefabAsset: {fileID: 0}

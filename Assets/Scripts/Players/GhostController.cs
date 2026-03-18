@@ -23,6 +23,8 @@ public class GhostController : MonoBehaviour
     private Vector2 _dragOffset;
     private float _currentCarryHeight = 2f;
 
+
+
     private void Awake()
     {
         _mainCam = GetComponentInChildren<Camera>();
@@ -150,7 +152,7 @@ public class GhostController : MonoBehaviour
     {
         Ray ray = GetRaycast();
         RaycastHit hit;
-        if (!Physics.Raycast(ray, out hit, Mathf.Infinity, _interactLayer))
+        if (!Physics.Raycast(ray, out hit, Mathf.Infinity, _interactLayer, QueryTriggerInteraction.Collide))
         {
             Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
             return;
@@ -158,7 +160,7 @@ public class GhostController : MonoBehaviour
 
         Debug.DrawLine(ray.origin, hit.point, Color.green, 2f);
 
-        Fracture fracture = hit.collider.GetComponentInParent<Fracture>();
+        Fracture fracture = hit.collider.GetComponent<Fracture>();
         if (fracture != null)
         {
             Rigidbody rb = fracture.GetComponent<Rigidbody>();
