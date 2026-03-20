@@ -19,6 +19,7 @@ public class MoveableTorch : InteractObjectBase, IMoveable
 
         _beingCarried = true;
 
+        rb.isKinematic = false;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         rb.useGravity = false;
         rb.linearDamping = 10f;

@@ -7,6 +7,8 @@ public class MovingPlatform : MonoBehaviour
 
     private Transform origin;
     private Transform currentTarget;
+    private CharacterController _player;
+    private Vector3 _lastpos;
 
     private int targetIndex = 1;
 
@@ -17,6 +19,7 @@ public class MovingPlatform : MonoBehaviour
     {
         origin = _waypointPath.GetWayPoint(0);
         currentTarget = _waypointPath.GetWayPoint(targetIndex);
+        _lastpos = transform.position;
     }
 
     private void Update()
@@ -39,7 +42,13 @@ public class MovingPlatform : MonoBehaviour
         //move towards destination
         transform.position = Vector3.MoveTowards(transform.position, destination.position, _speed * Time.deltaTime);
 
-        if(transform.position == destination.position)
+        if(_player != null)
+        {
+            Vector3 movement = transform.position - _lastpos;
+            _player.Move(movement);
+        }
+
+        if (transform.position == destination.position)
         {
             if(isReturning)
             {
@@ -60,14 +69,15 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.SetParent(transform);
+        _player = other.GetComponent<CharacterController>();
         isReturning = false;
         isMoving = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.transform.SetParent(null);
+
+        _player = null;
         isReturning = true;
     }
 }
