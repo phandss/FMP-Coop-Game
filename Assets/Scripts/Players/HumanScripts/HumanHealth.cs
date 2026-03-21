@@ -80,4 +80,15 @@ public class HumanHealth : MonoBehaviour
             OnHealthChanged.Invoke(currentHealth);
         }
     }
+
+    public void Respawn()
+    {
+        currentHealth = maxHealth;
+
+        if (OnHealthChanged != null)
+        {
+            OnHealthChanged.Invoke(currentHealth);
+        }
+    }
+
 }
