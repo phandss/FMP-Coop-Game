@@ -1,11 +1,17 @@
 using UnityEngine;
 
+
 public class ObjectPickup : InteractObjectBase, IMoveable
 {
     public override bool isInteractable => true;
 
 
     [SerializeField] private float _carryForce = 10f;
+
+    private void Reset()
+    {
+        gameObject.layer = LayerMask.NameToLayer("Interactable");
+    }
 
     public void OnDragStart(Vector3 pos)
     {

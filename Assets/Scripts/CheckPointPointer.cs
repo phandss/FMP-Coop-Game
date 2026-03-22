@@ -10,7 +10,7 @@ public class CheckPointPointer : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             CheckpointManager.Instance.SetCheckpoint(checkpointIndex);
-            Debug.Log("Checkpoint reached!");
+            Debug.Log("Checkpoint:"+ checkpointIndex+" reached!");
         }
     }
 }

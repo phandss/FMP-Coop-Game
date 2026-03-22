@@ -30,7 +30,7 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        _prompt = GetComponent<InteractPromptUI>();
+        _prompt = GetComponentInChildren<InteractPromptUI>();
 
     }
 

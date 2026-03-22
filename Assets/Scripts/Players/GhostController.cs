@@ -97,11 +97,11 @@ public class GhostController : MonoBehaviour
                 _currentCarryHeight = Mathf.Clamp(_currentCarryHeight - scroll * _scrollSpeed * Time.deltaTime, _minCarryHeight, _maxCarryHeight);
                 _dragPlane = new Plane(Vector3.up, new Vector3(0f, _currentCarryHeight, 0f));
             }
-            _pressedMoveable.OnDrag(BuildDragPosition());
+            _pressedMoveable.OnDrag(UpdateDragHeight());
         }
     }
 
-    private Vector3 BuildDragPosition()
+    private Vector3 UpdateDragHeight()
     {
         Vector3 mouseWorld = GetMouseWorldOnPlane();
         return new Vector3(mouseWorld.x + _dragOffset.x, _currentCarryHeight, mouseWorld.z + _dragOffset.y);

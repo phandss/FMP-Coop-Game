@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1209711308774163751}
   - component: {fileID: 9049442393313606490}
   - component: {fileID: 6461053246044671952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CastBlocks-L0-V3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
