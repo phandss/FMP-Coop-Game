@@ -51,7 +51,7 @@ MonoBehaviour:
   leftDoorPanel: {fileID: 3451448611970808187}
   rightDoorPanel: {fileID: 1241579118838852576}
   openAngle: 90
-  openTimer: 0.8
+  openTime: 0.8
 --- !u!1 &2766292725942338270
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 5127461881959235682}
   - component: {fileID: 7542874172192462197}
   m_Layer: 3
-  m_Name: AutoCloseBox
+  m_Name: AutoCloseBox+Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,4 +606,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorLockTrigger
   doorToLock: {fileID: 4418953561226913961}
-  playerTag: Player
+  CheckPointIndex: 1

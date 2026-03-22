@@ -4,8 +4,8 @@ public class CheckpointManager : MonoBehaviour
 {
     public static CheckpointManager Instance { get; private set; }
 
-    [SerializeField] HumanHealth health;
-    [SerializeField] private Transform[] checkpoints;
+    [SerializeField] private HumanHealth health;
+    [SerializeField] private Transform[] respawnPoints;
     [SerializeField] private Transform playerPos;
 
     private int _currentCheckpointIndex = 0;
@@ -19,7 +19,11 @@ public class CheckpointManager : MonoBehaviour
         }
         Instance = this;
 
+
+
         health.OnDeath += RespawnAtCheckpoint;
+
+
 
     }
 
@@ -31,7 +35,13 @@ public class CheckpointManager : MonoBehaviour
 
     private void RespawnAtCheckpoint()
     {
-        playerPos.position = checkpoints[_currentCheckpointIndex].position;
+        if(_currentCheckpointIndex < 0 || _currentCheckpointIndex >= respawnPoints.Length)
+        {
+            Debug.LogWarning("Invalid checkpoint index. Respawning at the first checkpoint.");
+            _currentCheckpointIndex = 0;
+        }
+
+        playerPos.position = respawnPoints[_currentCheckpointIndex].position;
         health.Respawn();
     }
 

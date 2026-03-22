@@ -4,11 +4,16 @@ public class SpikeBallDamage : MonoBehaviour
 {
     [SerializeField] private float damage;
     [SerializeField] private float _maxLifeSpan;
+    [SerializeField] bool hasLifeSpan = true;
 
 
     private void Awake()
     {
-        Destroy(gameObject, _maxLifeSpan);
+        if (hasLifeSpan)
+        {
+            Destroy(gameObject, _maxLifeSpan);
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
