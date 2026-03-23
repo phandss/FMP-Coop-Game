@@ -11,7 +11,7 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
 
     protected Rigidbody rb { get; private set; }
 
-    private InteractPromptUI _prompt;
+
 
     protected bool AttemptInteractLock()
     {
@@ -30,7 +30,7 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        _prompt = GetComponentInChildren<InteractPromptUI>();
+
 
     }
 
@@ -44,13 +44,13 @@ public abstract class InteractObjectBase : MonoBehaviour, IInteractable
 
     public virtual void OnHoverEnter(string buttonPrompt)
     {
-        _prompt?.Show(buttonPrompt);
+        InteractPromptUI.Instance?.Show(buttonPrompt, transform);
     }
 
 
 
     public virtual void OnHoverExit()
     {
-        _prompt?.Hide();
+        InteractPromptUI.Instance?.Hide();
     }
 }

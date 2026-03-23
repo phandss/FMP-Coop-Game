@@ -6,70 +6,66 @@ using UnityEngine.UIElements;
 
 public class InteractPromptUI : MonoBehaviour
 {
-    public Canvas promptCanvas;
-    public Image promptImage;
-    public TextMeshProUGUI promptText;
-    public Vector3 worldOffset = new Vector3(0, 2, 0);
-    public bool billboard = true;
 
+    public static InteractPromptUI Instance { get; private set; }
 
+    [SerializeField] private GameObject _promptObj;
+    [SerializeField] private TextMeshProUGUI _promptText;
+    [SerializeField] private Vector2 _offset = new Vector2(15, -15);
+
+    private Transform _anchor;
     private Camera _mainCam;
-
 
     private void Awake()
     {
+        Instance = this;
         _mainCam = Camera.main;
 
-        if(promptCanvas != null)
+        if (_promptObj != null)
         {
-            promptCanvas.gameObject.SetActive(false);
+            _promptObj.SetActive(false);
         }
     }
 
     private void LateUpdate()
     {
-        if(promptCanvas == null || !promptCanvas.gameObject.activeSelf)
+        if(!_promptObj.activeSelf || _promptObj == null || _anchor == null)
         {
             return;
         }
 
-        transform.position = transform.parent.position + worldOffset;
+        Vector3 screenPos = _mainCam.WorldToScreenPoint(_anchor.position);
 
-        if(billboard && _mainCam != null)
+        if(screenPos.z < 0)
         {
-            transform.rotation = _mainCam.transform.rotation;
+            _promptObj.SetActive(false);
+            return;
         }
+
+        ((RectTransform)_promptObj.transform).anchoredPosition = new Vector2(screenPos.x, screenPos.y) + _offset;
     }
 
-    public void Show(string buttonPrompt)
+    public void Show(string buttonPrompt, Transform anchor)
     {
-        if (promptCanvas == null)
-        { 
+        if(_promptObj == null)
+        {
             return;
         }
 
-        if (promptText != null)
-        {
-            promptText.text = string.IsNullOrEmpty(buttonPrompt) ? "E" : buttonPrompt;
-        }
-
-        promptCanvas.gameObject.SetActive(true);
+        _anchor = anchor;
+        _promptText.text = buttonPrompt;
+        _promptObj.SetActive(true);
     }
 
     public void Hide()
     {
-        if (promptCanvas != null)
+        if(_promptObj == null)
         {
-            promptCanvas.gameObject.SetActive(false);
-        }
-    }
-
-    public void SetIcon(Sprite sprite)
-    {
-        if (promptImage != null)
-        {
-            promptImage.sprite = sprite;
+            return;
         }
 
+        _promptObj.SetActive(false);
+        _anchor = null;
     }
+
 }
