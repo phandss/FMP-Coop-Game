@@ -41,7 +41,7 @@ public class CheckpointManager : MonoBehaviour
             _currentCheckpointIndex = 0;
         }
 
-        playerPos.position = respawnPoints[_currentCheckpointIndex].position;
+        playerPos.position = respawnPoints[_currentCheckpointIndex].position ;
         health.Respawn();
     }
 

@@ -6,7 +6,7 @@ public class InteractSwitch : InteractObjectBase
     [SerializeField] private InteractDoor door;
     [SerializeField] private string _animParam = "LeverUp";
 
-    private bool switchState;
+
 
     public override bool isInteractable
     {
@@ -16,27 +16,21 @@ public class InteractSwitch : InteractObjectBase
 
     public override void OnInteract()
     {
+        Debug.Log("Switch attempt open");
         if (!AttemptInteractLock())
-        {
+        { 
             return;
         }
 
-        switchState = !switchState;
-
-        if (animator)
+        if(animator != null)
         {
-            animator.SetBool(_animParam, switchState);
+            animator.SetBool(_animParam, true);
         }
 
         if(door != null)
         {
-            if (switchState)
-            {
-                //door.OnSwitchActivate();
-
-                Debug.Log("Switch activated");
-            }
-            
+            door.SwitchOpen();
+            Debug.Log("Switch opened door");
         }
     }
 

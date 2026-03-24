@@ -7,8 +7,9 @@ public class InteractDoor : InteractObjectBase
     [SerializeField] private Transform rightDoorPanel;
     [SerializeField] private float openAngle = 90f;
     [SerializeField] private float openTime = 0.8f;
+    [SerializeField] private bool _isSwitchControlled = false;
 
-    public override bool isInteractable => !_isAnimating && !_isLocked;
+    public override bool isInteractable => !_isAnimating && !_isLocked && !_isSwitchControlled;
 
     private bool _isAnimating;
     private bool _isOpen;
@@ -32,7 +33,7 @@ public class InteractDoor : InteractObjectBase
 
     public override void OnInteract()
     {
-        if (!_isAnimating && !_isLocked)
+        if (!_isAnimating && !_isLocked && !_isSwitchControlled)
         {
             StartCoroutine(AnimateDoor(true));
         }
@@ -84,5 +85,20 @@ public class InteractDoor : InteractObjectBase
         {
             base.OnHoverEnter(buttonPrompt);
         }
+
+        if(_isSwitchControlled)
+        {
+            base.OnHoverEnter("Locked");
+        }
     }
+
+    public void SwitchOpen()
+    {
+        if (!_isAnimating && !_isLocked)
+        {
+            StartCoroutine(AnimateDoor(true));
+        }
+    }
+
+
 }
