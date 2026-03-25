@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7911686834631454378}
   - component: {fileID: 4440782181565264678}
   - component: {fileID: 2001677014800579983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LightSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bcc66fb6042b14d46bc9d27fa37aae9b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.78696
+      value: 50.51696
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bcc66fb6042b14d46bc9d27fa37aae9b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bcc66fb6042b14d46bc9d27fa37aae9b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -205,6 +209,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bcc66fb6042b14d46bc9d27fa37aae9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4048470594795221056}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bcc66fb6042b14d46bc9d27fa37aae9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4374862596692857451}
   m_SourcePrefab: {fileID: 100100000, guid: bcc66fb6042b14d46bc9d27fa37aae9b, type: 3}
 --- !u!1 &561048265046567462 stripped
 GameObject:
@@ -226,6 +233,19 @@ MonoBehaviour:
   fogWar: {fileID: 0}
   visibility: 1
   additionalRadius: 0
+--- !u!114 &4374862596692857451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561048265046567462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e813a2ddb1bf447a92dbd6aa2e8e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPickup
+  _carryForce: 10
 --- !u!4 &901545384655155356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bcc66fb6042b14d46bc9d27fa37aae9b, type: 3}

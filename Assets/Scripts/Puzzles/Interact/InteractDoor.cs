@@ -14,7 +14,7 @@ public class InteractDoor : InteractObjectBase
     private bool _isAnimating;
     private bool _isOpen;
     private bool _isLocked;
-
+    
     private Quaternion _leftClosedRot;
     private Quaternion _rightClosedRot;
     private Quaternion _leftOpenRot;

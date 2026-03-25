@@ -9,10 +9,9 @@ public class InteractSwitch : InteractObjectBase
 
 
     public override bool isInteractable
-    {
-        get { return isInteractLocked; }
+    {   
+        get { return !isInteractLocked; }
     }
-
 
     public override void OnInteract()
     {

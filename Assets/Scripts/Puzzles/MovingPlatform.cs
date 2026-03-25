@@ -19,7 +19,7 @@ public class MovingPlatform : MonoBehaviour
     {
         origin = _waypointPath.GetWayPoint(0);
         currentTarget = _waypointPath.GetWayPoint(targetIndex);
-        _lastpos = transform.position;
+
     }
 
     private void Update()
@@ -39,6 +39,7 @@ public class MovingPlatform : MonoBehaviour
         {
             destination = currentTarget;
         }
+        _lastpos = transform.position;
         //move towards destination
         transform.position = Vector3.MoveTowards(transform.position, destination.position, _speed * Time.deltaTime);
 

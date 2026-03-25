@@ -13,5 +13,9 @@ public class DoorLockTrigger : MonoBehaviour
             doorToLock.OnLockTrigger();
             CheckpointManager.Instance.SetCheckpoint(CheckPointIndex);
         }
+        if (other.GetComponent<SpikeBallMovement>())
+        {
+            Destroy(gameObject);
+        }
     }
 }
