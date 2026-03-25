@@ -52,7 +52,7 @@ public class HumanInteraction : MonoBehaviour
         if(!_interactablesInRange.Contains(interactable))
         {
             _interactablesInRange.Add(interactable);
-            Debug.Log($"[HumanInteraction] Added interactable: {interactable} — total in range: {_interactablesInRange.Count}");
+            //Debug.Log($"[HumanInteraction] Added interactable: {interactable} — total in range: {_interactablesInRange.Count}");
 
         }
     }
@@ -108,7 +108,7 @@ public class HumanInteraction : MonoBehaviour
 
     public void OnInteractEnd()
     {
-        Debug.Log($"[HumanInteraction] Released — isCarrying: {_isCarrying}, pressed: {_pressedInteractable != null}");
+        //Debug.Log($"[HumanInteraction] Released — isCarrying: {_isCarrying}, pressed: {_pressedInteractable != null}");
         if (_pressedInteractable == null)
         {
             return;

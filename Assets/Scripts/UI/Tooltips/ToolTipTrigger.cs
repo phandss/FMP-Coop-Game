@@ -1,15 +1,26 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ToolTipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ToolTipTrigger : MonoBehaviour
 {
-    public void OnPointerEnter(PointerEventData eventData)
+
+    public string content;
+    public string header;
+
+    public void OnTriggerEnter(Collider other)
     {
-        TooltipManager.Show();
+        if (other.CompareTag("Player"))
+        {
+            TooltipManager.Show(content, header);
+        }
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+
+    public void OnTriggerExit(Collider other)
     {
-        TooltipManager.Hide();
+        if (other.CompareTag("Player"))
+        {
+            TooltipManager.Hide();
+        }
     }
 }

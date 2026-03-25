@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CheckPointPointer : MonoBehaviour
 {
-    [SerializeField] private Transform checkpointTransform;
     [SerializeField] private int checkpointIndex;
 
     private void OnTriggerEnter(Collider other)

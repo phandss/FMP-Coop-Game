@@ -48,8 +48,6 @@ public class HumanHealth : MonoBehaviour
             OnHealthChanged.Invoke(currentHealth);
         }
 
-        Debug.Log("Human took " + amount + " damage. Health now: " + currentHealth);
-
         // check death after damage
         if (currentHealth <= 0)
         {

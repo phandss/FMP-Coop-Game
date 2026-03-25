@@ -23,25 +23,34 @@ public class CheckpointManager : MonoBehaviour
 
         health.OnDeath += RespawnAtCheckpoint;
 
-
-
     }
 
     public void SetCheckpoint(int index)
     {
         _currentCheckpointIndex = index;
+        Debug.Log($"Checkpoint set to index: {_currentCheckpointIndex}");
     }
 
 
     private void RespawnAtCheckpoint()
     {
-        if(_currentCheckpointIndex < 0 || _currentCheckpointIndex >= respawnPoints.Length)
+        Debug.Log($"Respawning at checkpoint index: {_currentCheckpointIndex}");
+        if (_currentCheckpointIndex < 0 || _currentCheckpointIndex >= respawnPoints.Length)
         {
             Debug.LogWarning("Invalid checkpoint index. Respawning at the first checkpoint.");
             _currentCheckpointIndex = 0;
         }
+        var cc = playerPos.GetComponent<CharacterController>();
+        if(cc != null)
+        {
+            cc.enabled = false; // Disable CharacterController to avoid physics issues during teleportation
+        }
+        playerPos.position = respawnPoints[_currentCheckpointIndex].position;
+        if (cc != null)
+        {
+            cc.enabled = true; // Re-enable CharacterController after teleportation
+        }
 
-        playerPos.position = respawnPoints[_currentCheckpointIndex].position ;
         health.Respawn();
     }
 

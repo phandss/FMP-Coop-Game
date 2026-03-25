@@ -85,7 +85,7 @@ public class GhostController : MonoBehaviour
 
             _isDragging = true;
             _pressedMoveable.OnDragStart(GetMouseWorldOnPlane());
-            Debug.Log("Ghost started dragging " + _pressedInteractable);
+            //Debug.Log("Ghost started dragging " + _pressedInteractable);
         }
 
         if (_isDragging)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class TooltipManager : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class TooltipManager : MonoBehaviour
         _instance = this;
     }
 
-    public static void Show()
+    public static void Show(string content, string header = "")
     {
+        _instance.toolTip.SetText(content, header);
         _instance.toolTip.gameObject.SetActive(true);
     }
 
