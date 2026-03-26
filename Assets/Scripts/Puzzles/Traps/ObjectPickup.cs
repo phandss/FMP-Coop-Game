@@ -52,7 +52,6 @@ public class ObjectPickup : InteractObjectBase, IMoveable
         rb.useGravity = true;
         rb.linearDamping = 0f;
         rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
-        rb.linearVelocity = Vector3.zero;
         UnlockInteract();
 
     }

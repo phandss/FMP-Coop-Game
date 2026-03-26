@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_Name
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c455996f6e6b49d418895f41b5216202, type: 3}
       propertyPath: m_IsActive
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpikeBall
   damage: 10
   _maxLifeSpan: 10000
+  hasLifeSpan: 1
 --- !u!135 &2944339130864042431
 SphereCollider:
   m_ObjectHideFlags: 0

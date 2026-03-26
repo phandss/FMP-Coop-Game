@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4853845223704843612}
   - component: {fileID: 6421376360403715298}
   - component: {fileID: 1505931962063880170}
+  - component: {fileID: 171784224854497911}
   m_Layer: 3
   m_Name: Crate 4
   m_TagString: Untagged
@@ -163,7 +164,7 @@ MonoBehaviour:
   - name: High
     prefab: {fileID: 9176823708544686172, guid: ca3082f7a27c8a444a73a305e4e97dc6, type: 3}
   debrisAmount: 0
-  forceRequired: 5
+  forceRequired: 10
   despawnType: 0
   despawnPercentage: 100
   despawnTime: 30
@@ -178,6 +179,19 @@ MonoBehaviour:
   volumeVariation: 0.1
   pitchVariation: 0.25
 --- !u!114 &1505931962063880170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953666963182373358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e813a2ddb1bf447a92dbd6aa2e8e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPickup
+  _carryForce: 10
+--- !u!114 &171784224854497911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
