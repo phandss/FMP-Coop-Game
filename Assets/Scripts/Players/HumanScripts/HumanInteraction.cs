@@ -29,10 +29,9 @@ public class HumanInteraction : MonoBehaviour
 
     private void Awake()
     {
-        _buttonPrompt = "E";
         if(actionReference != null)
         {
-            string display = actionReference.action.GetBindingDisplayString(InputBinding.DisplayStringOptions.DontIncludeInteractions);
+            string display = actionReference.action.GetBindingDisplayString(group: "Keyboard&Mouse", options: InputBinding.DisplayStringOptions.DontIncludeInteractions);
             _buttonPrompt = string.IsNullOrEmpty(display) ? "E" : display;
         }
 

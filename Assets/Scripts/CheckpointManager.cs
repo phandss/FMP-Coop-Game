@@ -54,5 +54,9 @@ public class CheckpointManager : MonoBehaviour
         health.Respawn();
     }
 
+    private void Update()
+    {
+        Debug.Log($"Current checkpoint index: {_currentCheckpointIndex}");
+    }
 }
 

@@ -53,7 +53,7 @@ public class InteractPromptUI : MonoBehaviour
         }
 
         _anchor = anchor;
-        _promptText.text = buttonPrompt;
+        _promptText.text = $"[{buttonPrompt}] - Interact";
         _promptObj.SetActive(true);
     }
 

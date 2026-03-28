@@ -10,12 +10,17 @@ public class DoorLockTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            doorToLock.OnLockTrigger();
+            
             CheckpointManager.Instance.SetCheckpoint(CheckPointIndex);
         }
-        if (other.GetComponent<SpikeBallMovement>())
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            doorToLock.OnLockTrigger();
         }
     }
 }

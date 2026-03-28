@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1449908904678034518}
   - component: {fileID: 3705169235985578906}
+  - component: {fileID: 8326379312529513162}
   m_Layer: 0
   m_Name: ArrowSpawner
   m_TagString: Untagged
@@ -47,3 +48,26 @@ MonoBehaviour:
   canReactivate: 1
   _arrowPrefab: {fileID: 1959729250425484, guid: 5187dfa4d8f19524e8bbf7c6894b7de7, type: 3}
   _projSpeed: 10
+  _color: {r: 1, g: 0, b: 0, a: 1}
+  _length: 2
+--- !u!65 &8326379312529513162
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628231505962544528}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.725394, y: 2.9329848, z: 1}
+  m_Center: {x: -0.09277129, y: 0.9664924, z: -4.3018114e-16}

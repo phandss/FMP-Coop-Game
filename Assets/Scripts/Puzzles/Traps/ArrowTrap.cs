@@ -4,9 +4,18 @@ public class ArrowTrap : TrapBase
 {
     [SerializeField] private GameObject _arrowPrefab;
     [SerializeField] private float _projSpeed = 10f;
+    [SerializeField] private int _spawnAmount = 3;
+    [SerializeField] private int spacing = 1;
 
     [SerializeField] private Color _color = Color.red;
     [SerializeField] private float _length = 2f;
+
+    private Bounds _bounds;
+
+    private void Awake()
+    {
+        _bounds = GetComponent<Collider>().bounds;
+    }
 
     public override void Activate()
     {
@@ -16,11 +25,15 @@ public class ArrowTrap : TrapBase
             return;
         }
 
-        GameObject arrow = Instantiate(_arrowPrefab, transform.position, transform.rotation);
-        ArrowProjectile projectile = arrow.GetComponent<ArrowProjectile>();
-        projectile.Fire(transform.forward, _projSpeed);
 
-        Debug.Log("ArrowTrap activated: Fired an arrow.");
+        for (int i = 0; i < _spawnAmount; i++)
+        {
+            float offset = (i - (_spawnAmount - 1) / 2f) * spacing;
+            Vector3 spawnPos = transform.position + transform.up * offset;
+            GameObject arrow = Instantiate(_arrowPrefab, spawnPos, transform.rotation);
+            arrow.GetComponent<ArrowProjectile>().Fire(transform.forward, _projSpeed);
+        }
+
     }
 
 

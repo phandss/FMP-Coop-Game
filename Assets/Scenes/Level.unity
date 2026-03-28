@@ -323,6 +323,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1693,6 +1717,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 2080482676}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2012,6 +2060,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 2080482676}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2434,6 +2506,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3613,6 +3689,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3925,6 +4025,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1082499858}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4834,6 +4958,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6008,7 +6136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09cdb691967fe9e47870dd543aa0d3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPromptUI
-  _promptObj: {fileID: 1236029718}
+  _promptObj: {fileID: 1335966979}
   _promptText: {fileID: 1236029719}
   _offset: {x: 0, y: 40}
 --- !u!4 &383197826
@@ -6981,6 +7109,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7947,6 +8099,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 977966248}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8246,7 +8422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22
+      value: -21.67
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8283,6 +8459,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8429,6 +8609,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8587,6 +8771,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512401119}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &513494915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513494916}
+  - component: {fileID: 513494918}
+  - component: {fileID: 513494917}
+  m_Layer: 0
+  m_Name: Spot Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513494916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513494915}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.38348803, y: -0.78072274, z: 0.43497574, w: -0.23281978}
+  m_LocalPosition: {x: -44.061413, y: 0, z: 34.84725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014806907}
+  m_LocalEulerAnglesHint: {x: 30.041, y: -233.643, z: -67.773}
+--- !u!114 &513494917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513494915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &513494918
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513494915}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0
+  m_Range: 50
+  m_SpotAngle: 88.749756
+  m_InnerSpotAngle: 50.394672
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &522926094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7779381877309823848, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
@@ -9395,6 +9706,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9656,6 +9991,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10181,6 +10540,30 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5ed0d2292d0e45b4cb8d383137de813c, type: 2}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10591,6 +10974,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11412,6 +11819,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11482,6 +11913,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1714922892}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11823,6 +12278,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1310728035}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12208,6 +12687,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12425,6 +12928,30 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5ed0d2292d0e45b4cb8d383137de813c, type: 2}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12500,6 +13027,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1634228880}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12885,6 +13436,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 771215740}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13504,6 +14079,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14057,6 +14656,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1395958629}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     - target: {fileID: 8209992741389097621, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14071,6 +14694,133 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1304392946916197591, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
   m_PrefabInstance: {fileID: 861627036}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &868548213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 868548214}
+  - component: {fileID: 868548216}
+  - component: {fileID: 868548215}
+  m_Layer: 0
+  m_Name: Spot Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &868548214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868548213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5798429, y: -0.68568987, z: -0.0069922023, w: 0.43995765}
+  m_LocalPosition: {x: 0, y: 0, z: 34.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014806907}
+  m_LocalEulerAnglesHint: {x: 30.041, y: -135.062, z: -67.773}
+--- !u!114 &868548215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868548213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &868548216
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868548213}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0
+  m_Range: 50
+  m_SpotAngle: 88.749756
+  m_InnerSpotAngle: 50.394672
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &870114958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14131,6 +14881,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1068637651}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14330,6 +15104,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1401156310}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14914,6 +15712,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14989,6 +15811,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15208,6 +16054,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 805149399}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15711,6 +16581,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15781,6 +16675,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17399,7 +18317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22
+      value: -21.67
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17436,6 +18354,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17697,6 +18619,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18627,7 +19553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22
+      value: -21.67
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18664,6 +19590,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18900,6 +19830,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1345955092}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19165,7 +20119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22
+      value: -21.67
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19202,6 +20156,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19567,6 +20525,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1035565177}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20003,6 +20985,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1334635329}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20468,6 +21474,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20766,6 +21776,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20841,6 +21875,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20985,7 +22043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 138.4, y: 116.9}
+  m_AnchoredPosition: {x: 679, y: 63}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1237227775
@@ -21048,6 +22106,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 930133960}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21886,6 +22968,30 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5ed0d2292d0e45b4cb8d383137de813c, type: 2}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22145,6 +23251,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1981933196}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23461,6 +24591,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24187,6 +25341,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24253,6 +25431,30 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5ed0d2292d0e45b4cb8d383137de813c, type: 2}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26027,6 +27229,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 2001043452}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27085,6 +28311,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589953641}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1590991135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1590991136}
+  - component: {fileID: 1590991138}
+  - component: {fileID: 1590991137}
+  m_Layer: 0
+  m_Name: Spot Light (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1590991136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590991135}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.012293772, y: -0.44620758, z: 0.5797557, w: -0.6816385}
+  m_LocalPosition: {x: -44.698597, y: 0, z: 0.0029067993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014806907}
+  m_LocalEulerAnglesHint: {x: 30.041, y: -314.014, z: -67.773}
+--- !u!114 &1590991137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590991135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &1590991138
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590991135}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0
+  m_Range: 50
+  m_SpotAngle: 88.749756
+  m_InnerSpotAngle: 50.394672
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &1594170062
 GameObject:
   m_ObjectHideFlags: 0
@@ -27411,7 +28764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aadf4e49a75ecc438e947fe8f172bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InstantKillTrap
-  canReactivate: 1
+  canReactivate: 0
   health: {fileID: 2057687825}
 --- !u!4 &1605110315
 Transform:
@@ -27731,6 +29084,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28344,6 +29721,30 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5ed0d2292d0e45b4cb8d383137de813c, type: 2}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29711,6 +31112,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 598387573}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30730,6 +32155,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30821,7 +32270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22
+      value: -21.67
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30858,6 +32307,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32044,6 +33497,7 @@ Transform:
   - {fileID: 1207214912}
   - {fileID: 1638078642}
   - {fileID: 1409124367}
+  - {fileID: 2014806907}
   m_Father: {fileID: 1258410201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1940424371
@@ -32790,6 +34244,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33051,6 +34529,133 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1997322020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997322021}
+  - component: {fileID: 1997322023}
+  - component: {fileID: 1997322022}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1997322021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997322020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.438464, y: -0.23994853, z: -0.3794944, w: 0.7785616}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014806907}
+  m_LocalEulerAnglesHint: {x: 30.041, y: -54.69, z: -67.773}
+--- !u!114 &1997322022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997322020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &1997322023
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997322020}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0
+  m_Range: 50
+  m_SpotAngle: 88.749756
+  m_InnerSpotAngle: 50.394672
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &1998103837
 GameObject:
   m_ObjectHideFlags: 0
@@ -33473,6 +35078,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013577398}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2014806906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014806907}
+  m_Layer: 0
+  m_Name: RoomLighting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2014806907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014806906}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.807379, y: 10.435, z: 31.722038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1997322021}
+  - {fileID: 868548214}
+  - {fileID: 513494916}
+  - {fileID: 1590991136}
+  m_Father: {fileID: 1923695268}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2018361194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33920,6 +35560,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1956165841}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34061,7 +35725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 697446627692862573, guid: 78540dbd00e35ec4eac883845ce06fdf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.95
+      value: 98.5
       objectReference: {fileID: 0}
     - target: {fileID: 697446627692862573, guid: 78540dbd00e35ec4eac883845ce06fdf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34101,7 +35765,7 @@ PrefabInstance:
       objectReference: {fileID: 1354023080}
     - target: {fileID: 6423062228901790563, guid: 78540dbd00e35ec4eac883845ce06fdf, type: 3}
       propertyPath: _damagePerSecond
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6801592118486568493, guid: 78540dbd00e35ec4eac883845ce06fdf, type: 3}
       propertyPath: actionReference
@@ -34260,6 +35924,30 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5ed0d2292d0e45b4cb8d383137de813c, type: 2}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35283,6 +36971,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35781,6 +37473,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1007870547}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35851,6 +37567,30 @@ PrefabInstance:
       propertyPath: _trap
       value: 
       objectReference: {fileID: 1605110314}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2f3706b962fe4dae6ec4aa9fe99c0, type: 3}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: _activationLights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1997322023}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 868548216}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[2]'
+      value: 
+      objectReference: {fileID: 513494918}
+    - target: {fileID: 6321276209221892663, guid: a50bd01247cde724b818d7243bd7e425, type: 3}
+      propertyPath: '_activationLights.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1590991138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35963,7 +37703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22
+      value: -21.37
       objectReference: {fileID: 0}
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36000,6 +37740,10 @@ PrefabInstance:
     - target: {fileID: 1449908904678034518, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705169235985578906, guid: 1e256c91e69dfc1449bb9654715f052e, type: 3}
+      propertyPath: _projSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

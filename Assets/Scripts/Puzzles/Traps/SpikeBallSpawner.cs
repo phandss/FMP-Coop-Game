@@ -29,7 +29,7 @@ public class SpikeBallSpawner : TrapBase
             float offsetZ = Random.Range(-_bounds.extents.z, _bounds.extents.z);
             float offsetY = Random.Range(-_bounds.extents.y, _bounds.extents.y);
 
-            GameObject spikeBall = Instantiate(SpikeBallPrefab, _spawnPos.position + new Vector3(offsetX, offsetY, offsetZ), Quaternion.identity);
+            Instantiate(SpikeBallPrefab, _spawnPos.position + new Vector3(offsetX, offsetY, offsetZ), Quaternion.identity);
         }
     }
 
