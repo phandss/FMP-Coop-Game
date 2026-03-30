@@ -7,14 +7,19 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] private float _reactivationDelay = 1f;
     [SerializeField] private Light[] _activationLights;
 
+    [Header("Activation Settings")]
     [SerializeField] private Color _activationColour = Color.red;
     [SerializeField] private float _activationIntensity = 100f;
     [SerializeField] private AudioClip _activationSound;
-
+    [SerializeField] private float _pressDepth;
+    [SerializeField] private float _pressSpeed = 5f;
 
     private AudioSource _audioSource;
     private bool _isActivated = false;
     private Coroutine _reactivationCoroutine;
+    private Coroutine _pressCoroutine;
+    private Vector3 _initialPosition;
+    private Vector3 _pressedPosition;
 
 
     private void Awake()
@@ -24,6 +29,8 @@ public class PressurePlate : MonoBehaviour
         {
             _audioSource = gameObject.AddComponent<AudioSource>();
         }
+        _initialPosition = transform.position;
+        _pressedPosition = transform.position - Vector3.up * _pressDepth;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -57,6 +64,8 @@ public class PressurePlate : MonoBehaviour
             _reactivationCoroutine = StartCoroutine(ReactivateAfterDelay());
         }
 
+        //StartCoroutine(PressDown());
+
     }
 
 
@@ -80,7 +89,10 @@ public class PressurePlate : MonoBehaviour
             _reactivationCoroutine = null;
         }
 
+        //StartCoroutine(PressUp());
+
         _trap.Deactivate();
+
     }
     
     private IEnumerator ReactivateAfterDelay()
@@ -91,4 +103,29 @@ public class PressurePlate : MonoBehaviour
             _isActivated = false;
         }
     }
+
+    //private IEnumerator PressDown()
+    //{
+    //    float elapsed = 0f;
+    //    while (elapsed < _pressSpeed)
+    //    {
+    //        transform.position = Vector3.Lerp(_initialPosition, _pressedPosition, elapsed / _pressSpeed);
+    //        elapsed += Time.deltaTime;
+    //        yield return null;
+    //    }
+    //    transform.position = _pressedPosition;
+    //}
+
+    //private IEnumerator PressUp()
+    //{
+
+    //    float elapsed = 0f;
+    //    while (elapsed < _pressSpeed)
+    //    {
+    //        transform.position = Vector3.Lerp(_pressedPosition, _initialPosition, elapsed / _pressSpeed);
+    //        elapsed += Time.deltaTime;
+    //        yield return null;
+    //    }
+    //    transform.position = _initialPosition;
+    //}
 }
