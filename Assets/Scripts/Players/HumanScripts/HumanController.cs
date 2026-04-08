@@ -1,13 +1,14 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+
 
 public class HumanController : MonoBehaviour
 {
+    [SerializeField] private PauseMenuUI _pauseMenuUI;
     private HumanInteraction _interact;
     private HumanMovement _movement;
     private HumanHealth _health;
+    
 
     private void Awake()
     {
@@ -54,5 +55,13 @@ public class HumanController : MonoBehaviour
         }
     }
 
-
+    public void Pause(InputAction.CallbackContext context)
+    {
+        Debug.Log("Pause input received");
+        if (context.started)
+        {
+            Debug.Log("Pause button pressed");
+            _pauseMenuUI?.ShowPauseMenu();
+        }
+    }
 }

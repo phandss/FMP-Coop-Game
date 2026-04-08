@@ -517,11 +517,39 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6654266153356598614}
+        m_TargetAssemblyTypeName: HumanController, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2759940672354150864}
+        m_TargetAssemblyTypeName: GhostController, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ca20f961-e38e-4bd1-93c8-6a81b80457a4
+    m_ActionName: 'Player/Pause[/Mouse/middleButton,/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 2974928668201376451}
 --- !u!143 &8965461608932522817
 CharacterController:
   m_ObjectHideFlags: 0
@@ -559,6 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5908a547377adb4e9684eb00b8312a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HumanController
+  _pauseMenuUI: {fileID: 0}
 --- !u!114 &2759940672354150864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,7 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _warFog: {fileID: 0}
-  _damagePerSecond: 0
+  _damagePerSecond: 10
   _damageInterval: 1
 --- !u!136 &3339143845931593845
 CapsuleCollider:

@@ -11,6 +11,7 @@ public class GhostController : MonoBehaviour
     [SerializeField] private float _scrollSpeed = 10f;
     [SerializeField] private float _minCarryHeight = .2f;
     [SerializeField] private float _maxCarryHeight = 10f;
+    [SerializeField] private PauseMenuUI _pauseMenuUI;
 
     private string _buttonPrompt = "LMB";
 
@@ -123,6 +124,16 @@ public class GhostController : MonoBehaviour
         }
 
     }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("Toggling pause menu");
+            _pauseMenuUI?.ShowPauseMenu();
+        }
+    }
+
 
     private void HandleMouseUp()
     {

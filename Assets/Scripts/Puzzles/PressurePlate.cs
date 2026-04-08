@@ -17,9 +17,9 @@ public class PressurePlate : MonoBehaviour
     private AudioSource _audioSource;
     private bool _isActivated = false;
     private Coroutine _reactivationCoroutine;
-    private Coroutine _pressCoroutine;
-    private Vector3 _initialPosition;
-    private Vector3 _pressedPosition;
+    //private Coroutine _pressCoroutine;
+    //private Vector3 _initialPosition;
+    //private Vector3 _pressedPosition;
 
 
     private void Awake()
@@ -29,8 +29,8 @@ public class PressurePlate : MonoBehaviour
         {
             _audioSource = gameObject.AddComponent<AudioSource>();
         }
-        _initialPosition = transform.position;
-        _pressedPosition = transform.position - Vector3.up * _pressDepth;
+        //_initialPosition = transform.position;
+        //_pressedPosition = transform.position - Vector3.up * _pressDepth;
     }
     private void OnTriggerEnter(Collider other)
     {
