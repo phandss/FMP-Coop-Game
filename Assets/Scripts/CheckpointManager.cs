@@ -43,12 +43,12 @@ public class CheckpointManager : MonoBehaviour
         var cc = playerPos.GetComponent<CharacterController>();
         if(cc != null)
         {
-            cc.enabled = false; // Disable CharacterController to avoid physics issues during teleportation
+            cc.enabled = false; 
         }
         playerPos.position = respawnPoints[_currentCheckpointIndex].position;
         if (cc != null)
         {
-            cc.enabled = true; // Re-enable CharacterController after teleportation
+            cc.enabled = true; 
         }
 
         health.Respawn();
