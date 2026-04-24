@@ -609,6 +609,7 @@ MonoBehaviour:
   _scrollSpeed: 10
   _minCarryHeight: 0.2
   _maxCarryHeight: 10
+  _pauseMenuUI: {fileID: 0}
 --- !u!114 &6801592118486568493
 MonoBehaviour:
   m_ObjectHideFlags: 0

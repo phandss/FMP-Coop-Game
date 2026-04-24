@@ -5,7 +5,8 @@ public class PressurePlate : MonoBehaviour
 {
     [SerializeField] private TrapBase _trap;
     [SerializeField] private float _reactivationDelay = 1f;
-    [SerializeField] private Light[] _activationLights;
+    //[SerializeField] private Light[] _activationLights;
+    [SerializeField] private Light _activationLight;
 
     [Header("Activation Settings")]
     [SerializeField] private Color _activationColour = Color.red;
@@ -24,11 +25,19 @@ public class PressurePlate : MonoBehaviour
 
     private void Awake()
     {
+
+        _activationLight = GetComponentInChildren<Light>();
         _audioSource = GetComponent<AudioSource>();
         if(_audioSource == null)
         {
             _audioSource = gameObject.AddComponent<AudioSource>();
         }
+
+        if(_activationLight != null)
+        {
+            _activationLight = gameObject.GetComponentInChildren<Light>();
+        }
+
         //_initialPosition = transform.position;
         //_pressedPosition = transform.position - Vector3.up * _pressDepth;
     }
@@ -48,10 +57,10 @@ public class PressurePlate : MonoBehaviour
             _audioSource.PlayOneShot(_activationSound);
         }
 
-        foreach(var light in _activationLights)
+        if (_activationLight != null)
         {
-            light.intensity = _activationIntensity;
-            light.color = _activationColour;
+            _activationLight.intensity = _activationIntensity;
+            _activationLight.color = _activationColour;
         }
 
         //Debug.Log($"Pressure plate activated by {other.name}");
@@ -78,10 +87,10 @@ public class PressurePlate : MonoBehaviour
 
         _isActivated = false;
 
-        foreach(var light in _activationLights)
-        {
-            light.intensity = 0;
-        }
+        //if (_activationLight != null)
+        //{
+        //    _activationLight.intensity = 0;
+        //}
 
         if (_reactivationCoroutine != null)
         {

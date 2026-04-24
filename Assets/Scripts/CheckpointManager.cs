@@ -8,6 +8,7 @@ public class CheckpointManager : MonoBehaviour
     [SerializeField] private Transform[] respawnPoints;
     [SerializeField] private Transform playerPos;
 
+    private static int _savedCheckpointIndex = 0;
     private int _currentCheckpointIndex = 0;
 
     private void Awake()
@@ -19,7 +20,7 @@ public class CheckpointManager : MonoBehaviour
         }
         Instance = this;
 
-
+        _currentCheckpointIndex = _savedCheckpointIndex;
 
         health.OnDeath += RespawnAtCheckpoint;
 
@@ -28,7 +29,8 @@ public class CheckpointManager : MonoBehaviour
     public void SetCheckpoint(int index)
     {
         _currentCheckpointIndex = index;
-        Debug.Log($"Checkpoint set to index: {_currentCheckpointIndex}");
+        _savedCheckpointIndex = index;
+
     }
 
 
