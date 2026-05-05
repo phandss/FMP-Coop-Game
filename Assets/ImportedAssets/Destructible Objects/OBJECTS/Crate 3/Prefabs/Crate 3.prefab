@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8976882677420005473}
   - component: {fileID: 4845644586966346027}
   - component: {fileID: 8071307422818655033}
-  - component: {fileID: 1742825144410244892}
   m_Layer: 3
   m_Name: Crate 3
   m_TagString: Untagged
@@ -179,19 +178,6 @@ MonoBehaviour:
   volumeVariation: 0.1
   pitchVariation: 0.25
 --- !u!114 &8071307422818655033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7957644449929055489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e813a2ddb1bf447a92dbd6aa2e8e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectPickup
-  _carryForce: 10
---- !u!114 &1742825144410244892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

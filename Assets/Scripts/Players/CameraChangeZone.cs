@@ -17,6 +17,7 @@ public class CameraChangeZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player entered camera change zone");
             _follow.FollowOffset = _cameraOffset;
         }
     }
