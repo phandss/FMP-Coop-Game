@@ -12,6 +12,7 @@ public class GhostController : MonoBehaviour
     [SerializeField] private float _minCarryHeight = .2f;
     [SerializeField] private float _maxCarryHeight = 10f;
     [SerializeField] private PauseMenuUI _pauseMenuUI;
+    [SerializeField] private float _interactDistance = 100f;
 
     private string _buttonPrompt = "LMB";
 
@@ -163,9 +164,9 @@ public class GhostController : MonoBehaviour
     {
         Ray ray = GetRaycast();
         RaycastHit hit;
-        if (!Physics.Raycast(ray, out hit, Mathf.Infinity, _interactLayer, QueryTriggerInteraction.Collide))
+        if (!Physics.Raycast(ray, out hit, _interactDistance, _interactLayer, QueryTriggerInteraction.Collide))
         {
-            Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
+            Debug.DrawRay(ray.origin, ray.direction * _interactDistance, Color.red, 2f);
             return;
         }
 

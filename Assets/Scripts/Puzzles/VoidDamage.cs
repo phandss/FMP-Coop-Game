@@ -1,18 +1,20 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VoidDamage : MonoBehaviour
 {
+
     [SerializeField] private AudioClip _fallSound;
-    
+    [SerializeField] private GameObject _movingPlatform;
     private AudioSource _audioSource;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            other.GetComponent<HumanHealth>().TakeDamage(9999);
 
-            if(_fallSound != null)
+
+            if (_fallSound != null)
             {
                 if(_audioSource == null)
                 {
@@ -20,6 +22,19 @@ public class VoidDamage : MonoBehaviour
                 }
                 _audioSource.PlayOneShot(_fallSound);
             }
+
+            if(_movingPlatform != null)
+            {
+                _movingPlatform.GetComponent<MovingPlatform>().PlatformReset();
+            }
+
+
+            UniqueKillPlayer();
         }
+    }
+
+    private void UniqueKillPlayer()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

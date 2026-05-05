@@ -15,6 +15,8 @@ public class MovingPlatform : MonoBehaviour
     private bool isMoving = false;
     private bool isReturning = false;
 
+
+
     private void Start()
     {
         origin = _waypointPath.GetWayPoint(0);
@@ -66,6 +68,16 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
+
+    public void PlatformReset()
+    {
+        Debug.Log("Resetting platform to origin");
+        transform.position = origin.position;
+        targetIndex = 1;
+        currentTarget = _waypointPath.GetWayPoint(targetIndex);
+        isMoving = false;
+        isReturning = false;
+    }
 
 
     private void OnTriggerEnter(Collider other)

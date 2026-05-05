@@ -51,7 +51,6 @@ public class HumanHealth : MonoBehaviour
         // check death after damage
         if (currentHealth <= 0)
         {
-            // TODO maybe add ragdoll or animation here
             if (OnDeath != null)
             {
                 OnDeath.Invoke();
