@@ -26,47 +26,33 @@ public class MovingPlatform : MonoBehaviour
 
     private void Update()
     {
-        if(!isMoving)
-        {
-            return;
-        }
+        if (!isMoving) return;
 
-        Transform destination;
-
-        if(isReturning)
-        {
-            destination = _waypointPath.GetWayPoint(0);
-        }
-        else
-        {
-            destination = currentTarget;
-        }
         _lastpos = transform.position;
-        //move towards destination
-        transform.position = Vector3.MoveTowards(transform.position, destination.position, _speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, currentTarget.position, _speed * Time.deltaTime);
 
-        if(_player != null)
+        if (_player != null)
         {
             Vector3 movement = transform.position - _lastpos;
             _player.Move(movement);
         }
 
-        if (transform.position == destination.position)
+        if (transform.position == currentTarget.position)
         {
-            if(isReturning)
+            int nextIndex = _waypointPath.GetNextWaypointIndex(targetIndex);
+
+            if (nextIndex <= targetIndex)
             {
-                //reset to origin
-                isReturning = false;
+                // reached the final waypoint, stop
                 isMoving = false;
+                return;
             }
-            else
-            {
-                //move to next waypoint
-                targetIndex = _waypointPath.GetNextWaypointIndex(targetIndex);
-                currentTarget = _waypointPath.GetWayPoint(targetIndex);
-            }
+
+            targetIndex = nextIndex;
+            currentTarget = _waypointPath.GetWayPoint(targetIndex);
         }
     }
+
 
 
     public void PlatformReset()
@@ -91,6 +77,6 @@ public class MovingPlatform : MonoBehaviour
     {
 
         _player = null;
-        isReturning = true;
+
     }
 }

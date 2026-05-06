@@ -869,16 +869,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2074659494895955287, guid: 3df8b5a1b9c9e72479c4639ebbab7f7c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 398697205}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3df8b5a1b9c9e72479c4639ebbab7f7c, type: 3}
---- !u!1 &31880485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2074659494895955287, guid: 3df8b5a1b9c9e72479c4639ebbab7f7c, type: 3}
-  m_PrefabInstance: {fileID: 31880484}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &33567729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3311,7 +3303,7 @@ Transform:
   m_GameObject: {fileID: 108726191}
   serializedVersion: 2
   m_LocalRotation: {x: 0.59003186, y: -0.000000023907964, z: 0.00000001747193, w: 0.80737996}
-  m_LocalPosition: {x: 15.67, y: 11, z: 8.4}
+  m_LocalPosition: {x: 15.67, y: 11, z: 9.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12375,20 +12367,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5253897793731956447, guid: 3df8b5a1b9c9e72479c4639ebbab7f7c, type: 3}
   m_PrefabInstance: {fileID: 31880484}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &398697205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31880485}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfeb3ea29e57c1a4f974bbb702405bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToolTipTrigger
-  content: Figure out the puzzle by placing the images in the correct slots.
-  header: Final room
 --- !u!1001 &401194953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48420,6 +48398,18 @@ PrefabInstance:
       propertyPath: _isSwitchControlled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5127461881959235682, guid: 7deec4effd2abb44d80d0cfd8e50eb37, type: 3}
+      propertyPath: m_Size.x
+      value: 2.9075663
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127461881959235682, guid: 7deec4effd2abb44d80d0cfd8e50eb37, type: 3}
+      propertyPath: m_Center.x
+      value: -0.9537994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127461881959235682, guid: 7deec4effd2abb44d80d0cfd8e50eb37, type: 3}
+      propertyPath: m_Center.z
+      value: -0.13010716
+      objectReference: {fileID: 0}
     - target: {fileID: 7542874172192462197, guid: 7deec4effd2abb44d80d0cfd8e50eb37, type: 3}
       propertyPath: CheckPointIndex
       value: 2
@@ -64140,7 +64130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 697446627692862573, guid: 78540dbd00e35ec4eac883845ce06fdf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.9
+      value: 11.65
       objectReference: {fileID: 0}
     - target: {fileID: 697446627692862573, guid: 78540dbd00e35ec4eac883845ce06fdf, type: 3}
       propertyPath: m_LocalRotation.w
