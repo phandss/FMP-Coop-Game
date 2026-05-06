@@ -10,14 +10,20 @@ public class PauseMenuUI : MonoBehaviour
         if (_pauseMenuPanel != null)
         {
             _pauseMenuPanel.SetActive(true);
-            Time.timeScale = 0f; // Pause the game
+            Time.timeScale = 0f;
         }
+    }
+
+    public void ReturnMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu"); 
     }
 
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 
     public void HidePauseMenu()
@@ -25,7 +31,12 @@ public class PauseMenuUI : MonoBehaviour
         if (_pauseMenuPanel != null)
         {
             _pauseMenuPanel.SetActive(false);
-            Time.timeScale = 1f; // Resume the game
+            Time.timeScale = 1f;
         }
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

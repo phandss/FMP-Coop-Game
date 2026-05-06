@@ -45,6 +45,7 @@ public class ExplosiveBarrel : MonoBehaviour
         Barrel.SetActive(false);
         Explosion.SetActive(true);
 
+        source.spatialBlend = 1f;
         source.Play();
 
         Collider[] players = Physics.OverlapSphere(transform.position, range);

@@ -33,6 +33,7 @@ public class Despawn : MonoBehaviour
     void Start(){
         //Plays a random audio clip from the list of audio clips set in the object
         audioSource = GetComponent<AudioSource>();
+        audioSource.spatialBlend = 1f;
         audioSource.pitch = 1f + Random.Range(-pitchVariation/2, pitchVariation/2);
         audioSource.PlayOneShot(clip, volume + Random.Range(-volumeVariation, volumeVariation));
     }
